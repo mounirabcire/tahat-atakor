@@ -133,7 +133,7 @@ ul {
     top: -100vh;
     transform: translate(-50%, -50%);
     z-index: 10;
-    transition: top 0.8s;
+    transition: all 0.3s;
 }
 
 .close-icon {
@@ -172,10 +172,10 @@ ul {
 
 /* ACTIONS */
 
-.open-menu-bar{
+.open-menu-bar {
     top: 50%;
 }
 
-.close-menu-bar{
+.close-menu-bar {
     top: -100vh;
 }
