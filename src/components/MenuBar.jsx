@@ -13,7 +13,7 @@ function MenuBar({ setIsVisible, isVisible }) {
             <div className="links">
                 <ul>
                     <li>
-                        <a href="#home">Home</a>
+                        <a href="#home" className='active-link'>Home</a>
                     </li>
                     <li>
                         <a href="#about">About us</a>
