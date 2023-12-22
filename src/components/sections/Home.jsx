@@ -1,10 +1,12 @@
+// when I open the menu bar the transition effect doesnt fucntion becouse the compoent unmounts
+
 import { useState } from 'react';
 import logo from '../../../public/logo-white.svg';
 import video from '../../../public/pexels-rodnae-productions-7895948 (Original).mp4';
 import MenuBar from '../MenuBar';
 
 function Home() {
-    const [isVisible, setIsVisible] = useState(true);
+    const [isVisible, setIsVisible] = useState(false);
 
     return (
         <>
@@ -56,7 +58,7 @@ function Home() {
                             isVisible={isVisible}
                         />
                     )}
-                    <video autoPlay muted loop>
+                    <video autoPlay loop muted plays-inline>
                         <source src={video} type="video/mp4" />
                     </video>
                     <div className="bg-back"></div>
