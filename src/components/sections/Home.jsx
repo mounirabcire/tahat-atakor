@@ -10,7 +10,7 @@ function Home() {
 
     return (
         <>
-            <header className="home-section">
+            <header className="home-section" id="home">
                 <div className="bg-img">
                     <div className="bg-back">
                         <div className="container">

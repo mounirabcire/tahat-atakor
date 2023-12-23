@@ -3,7 +3,7 @@ import arrow from '../../../public/arrow-right.svg';
 
 function Aboutus() {
     return (
-        <section className="aboutus-section">
+        <section className="aboutus-section" id='about'>
             <div className="container">
                 <div className="row">
                     <div className="col-12 texts">

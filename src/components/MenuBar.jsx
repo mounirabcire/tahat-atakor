@@ -20,21 +20,45 @@ function MenuBar({ setIsVisible, isVisible }) {
             <div className="links">
                 <ul>
                     <li>
-                        <a href="#home" className="active-link">
+                        <a
+                            href="#home"
+                            className="active-link"
+                            onClick={() => setIsVisible(pre => !pre)}
+                        >
                             Home
                         </a>
                     </li>
                     <li>
-                        <a href="#about">About us</a>
+                        <a
+                            href="#about"
+                            onClick={() => setIsVisible(pre => !pre)}
+                        >
+                            About us
+                        </a>
                     </li>
                     <li>
-                        <a href="#cars">Cars</a>
+                        <a
+                            href="#cars"
+                            onClick={() => setIsVisible(pre => !pre)}
+                        >
+                            Cars
+                        </a>
                     </li>
                     <li>
-                        <a href="#book">Book now</a>
+                        <a
+                            href="#book"
+                            onClick={() => setIsVisible(pre => !pre)}
+                        >
+                            Book now
+                        </a>
                     </li>
                     <li>
-                        <a href="#contact">Contact</a>
+                        <a
+                            href="#contact"
+                            onClick={() => setIsVisible(pre => !pre)}
+                        >
+                            Contact
+                        </a>
                     </li>
                     <li>
                         <select
