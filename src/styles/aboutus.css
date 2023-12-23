@@ -1,0 +1,104 @@
+/* ABOUT US SECTION  */
+.aboutus-section {
+    min-height: 100vh;
+}
+
+.texts {
+    margin-bottom: 30px;
+}
+
+.texts h2 {
+    text-align: center;
+    margin-bottom: 15px;
+    margin-top: 60px;
+    font-size: var(--h2-size);
+}
+
+.texts p {
+    padding: 5px 15px;
+    line-height: 1.8;
+    background: #e534243a;
+    border-radius: 5px;
+}
+
+.aboutus-section span {
+    padding: 0 15px;
+    background-color: var(--red-color);
+    border-radius: 5px;
+    color: var(--white-color);
+}
+
+.aboutus-section .row:nth-child(2) {
+    margin-top: 60px;
+}
+
+.aboutus-section .row:nth-child(2) h2 {
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: var(--h2-size);
+}
+
+.explore-link {
+    text-decoration: underline var(--white-color) 2px;
+    cursor: pointer;
+}
+
+.explore-link img {
+    width: 20px;
+    height: 20px;
+    transition: transform 0.3s;
+}
+
+.explore-link:hover img {
+    transform: rotate(45deg);
+}
+
+.aboutus-section .row:nth-child(2) div {
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.aboutus-section .card {
+    height: 350px;
+    border: 1px solid var(--gray2-color);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.116);
+    background-image: url('../../public/cars.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: var(--white-color);
+}
+
+.aboutus-section .card .bg-back{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.aboutus-section .card .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0);
+    backdrop-filter: blur(20px);
+    width: 80%;
+}
+
+.aboutus-section .card .card-body p {
+    color: var(--white-color);
+}
+
+.aboutus-section h3 {
+    font-size: var(--h4-size);
+}
+
+/* RESPONSIVENEES */
+@media screen and(min-width: 768px) {
+    .aboutus-section .row:nth-child(2) div {
+        margin-bottom: 0px;
+    }
+}

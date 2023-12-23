@@ -5,7 +5,9 @@ function App() {
     return (
         <>
             <Home />
-            <Aboutus />
+            <main>
+                <Aboutus />
+            </main>
         </>
     );
 }
