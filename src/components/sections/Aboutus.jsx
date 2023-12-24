@@ -36,7 +36,7 @@ function Aboutus() {
                     <h2>
                         <span>Why</span> us
                     </h2>
-                    <div className="col-12 col-md-4">
+                    <div className="col-12 col-lg-4">
                         <div className="card">
                             <div className="bg-back">
                                 <div className="card-body">
@@ -54,7 +54,7 @@ function Aboutus() {
                             </div>
                         </div>
                     </div>
-                    <div className="col-12 col-md-4">
+                    <div className="col-12 col-lg-4">
                         <div className="card">
                             <div className="bg-back">
                                 <div className="card-body">
@@ -73,7 +73,7 @@ function Aboutus() {
                             </div>
                         </div>
                     </div>
-                    <div className="col-12 col-md-4">
+                    <div className="col-12 col-lg-4">
                         <div className="card">
                             <div className="bg-back">
                                 <div className="card-body">

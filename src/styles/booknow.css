@@ -1,0 +1,112 @@
+/* BOOK NOW SECTION */
+.book-section {
+    min-height: 100vh;
+}
+
+.img-holder {
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-holder img {
+    width: 100%;
+}
+
+.book-section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 60px;
+    font-size: var(--h2-size);
+}
+
+.book-section span:first-child {
+    padding: 0 15px;
+    background-color: var(--red-color);
+    border-radius: 5px;
+    color: var(--white-color);
+}
+
+.form {
+    padding: 30px;
+    height: 100%;
+    background-color: var(--black-color);
+    border-radius: 5px;
+    color: var(--white-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form h2 {
+    margin-block: 15px;
+}
+
+.inputBox {
+    margin: 15px 0;
+    width: 300px;
+    font-weight: bold;
+    position: relative;
+}
+
+.inputText {
+    width: 100%;
+    height: 55px;
+    padding: 7px;
+    background-color: transparent;
+    color: var(--white-color);
+    border-radius: 5px;
+    border: 1px solid var(--red-color);
+    resize: none;
+    outline: none;
+}
+
+/* .msgArea {
+    height: 200px;
+} */
+
+.inputBox span {
+    letter-spacing: 3px;
+    position: absolute;
+    left: 4px;
+    transform: translateY(2px);
+    pointer-events: none;
+    transition: transform 0.4s;
+}
+
+/* .inputText:focus,
+.inputText:valid {
+    border: 2px solid var(--titleColor);
+} */
+
+.inputText:focus~span,
+.inputText:valid~span {
+    width: 110px;
+    padding: 5px 10px;
+    text-align: center;
+    color: var(--white-color);
+    background-color: var(--red-color);
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    transform: translate(146px, -23px);
+}
+
+.submitBox {
+    margin: 10px 0;
+    padding: 18px 25px;
+    color: var(--white-color);
+    border: 1px solid transparent;
+    background-color: var(--red-color);
+    letter-spacing: 2.5px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.submitBox:hover {
+    background-color: transparent;
+    border: 1px solid var(--red-color);
+    transition: all 0.2s;
+}

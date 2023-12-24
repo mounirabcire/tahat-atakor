@@ -46,7 +46,7 @@ function MenuBar({ setIsVisible, isVisible }) {
                     </li>
                     <li>
                         <a
-                            href="#book"
+                            href="#booking"
                             onClick={() => setIsVisible(pre => !pre)}
                         >
                             Book now
