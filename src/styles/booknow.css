@@ -67,21 +67,21 @@
     height: 200px;
 } */
 
-.inputBox span {
+/* .inputBox span {
     letter-spacing: 3px;
     position: absolute;
     left: 4px;
     transform: translateY(2px);
     pointer-events: none;
     transition: transform 0.4s;
-}
+} */
 
 /* .inputText:focus,
 .inputText:valid {
     border: 2px solid var(--titleColor);
 } */
 
-.inputText:focus~span,
+/* .inputText:focus~span,
 .inputText:valid~span {
     width: 110px;
     padding: 5px 10px;
@@ -91,7 +91,7 @@
     font-size: 0.8rem;
     letter-spacing: 2px;
     transform: translate(146px, -23px);
-}
+} */
 
 .submitBox {
     margin: 10px 0;
@@ -109,4 +109,18 @@
     background-color: transparent;
     border: 1px solid var(--red-color);
     transition: all 0.2s;
+}
+
+.book-section select{
+    width: 100%;
+    padding: 10px 0;
+    background-color: transparent;
+    border: 1px solid var(--red-color);
+    border-radius: 5px;
+    color: var(--white-color);
+}
+
+.book-section select option{
+    background: var(--black-color);
+    color: var(--white-color);
 }

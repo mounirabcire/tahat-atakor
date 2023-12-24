@@ -1,7 +1,13 @@
+import { useState } from 'react';
 import car from '../../../public/car1.png';
 import '../../styles/booknow.css';
 
 function BookNow() {
+    const [fullName, setFullName] = useState('');
+    const [startDate, setStartDate] = useState('');
+    const [endDate, setEndDate] = useState('');
+    const [cars, setCars] = useState('');
+
     return (
         <section className="book-section" id="booking">
             <div className="container">
@@ -10,43 +16,53 @@ function BookNow() {
                         Book <span>Now</span>
                     </h2>
                     <div className="img-holder col-12 col-md-6">
-                        <img
-                            src={car}
-                            alt="A car"
-                            className='img-fluid'
-                        />
+                        <img src={car} alt="A car" className="img-fluid" />
                     </div>
                     <div className="col-12 col-md-6">
                         <form className="form">
-                            <h3>Select A Car!</h3>
+                            <h3>Choose your next car!</h3>
                             <div className="inputBox">
                                 <input
                                     className="inputText"
                                     type="text"
                                     name="user_name"
                                     id="contact-name"
+                                    placeholder="Full name..."
+                                    value={fullName}
+                                    onChange={e => setFullName(e.target.value)}
                                     required
                                 />
-                                <span>USERNAME</span>
                             </div>
                             <div className="inputBox">
                                 <input
                                     className="inputText"
-                                    type="email"
-                                    name="user_email"
+                                    type="date"
+                                    name="user-start-date"
                                     id="contact-email"
+                                    placeholder="Start date..."
+                                    value={startDate}
+                                    onChange={e => setStartDate(e.target.value)}
                                     required
                                 />
-                                <span>EMAIL</span>
                             </div>
                             <div className="inputBox">
-                                <textarea
-                                    className="inputText msgArea"
-                                    name="user_message"
-                                    id="contact-message"
+                                <input
+                                    className="inputText"
+                                    type="date"
+                                    name="user-end-date"
+                                    id="contact-email"
+                                    placeholder="End date..."
+                                    value={endDate}
+                                    onChange={e => setEndDate(e.target.value)}
                                     required
                                 />
-                                <span>MESSAGE</span>
+                            </div>
+                            <div className="inputBox">
+                                <select value={cars} onChange={(e)=>setCars(e.target.value)}>
+                                    <option value="1">car 1</option>
+                                    <option value="2">car 2</option>
+                                    <option value="3">car 3</option>
+                                </select>
                             </div>
                             <input
                                 type="submit"
