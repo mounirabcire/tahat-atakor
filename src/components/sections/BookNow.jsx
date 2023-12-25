@@ -15,10 +15,10 @@ function BookNow() {
                     <h2>
                         Book <span>Now</span>
                     </h2>
-                    <div className="img-holder col-12 col-md-6">
+                    <div className="img-holder col-12 col-lg-6">
                         <img src={car} alt="A car" className="img-fluid" />
                     </div>
-                    <div className="col-12 col-md-6">
+                    <div className="col-12 col-lg-6">
                         <form className="form">
                             <h3>Choose your next car!</h3>
                             <div className="inputBox">

@@ -28,7 +28,7 @@ html {
 
 /* Hide both vertical and horizontal scroll bars */
 body {
-    overflow: scroll;
+    overflow-y: scroll;
     font-family: 'Montserrat', sans-serif;
 }
 

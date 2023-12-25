@@ -48,7 +48,7 @@
 }
 
 .home-section section {
-    height: calc(100vh - 86px - 5px - 30px);
+    height: calc(100vh);
     display: flex;
     flex-direction: column;
     justify-content: center;
