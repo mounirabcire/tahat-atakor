@@ -64,6 +64,10 @@ ul {
     margin: 0;
 }
 
-p{
+p {
     color: var(--gray1-color);
+}
+
+button a {
+    color: var(--white-color);
 }

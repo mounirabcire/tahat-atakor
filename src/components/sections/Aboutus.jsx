@@ -1,9 +1,29 @@
 import '../../styles/aboutus.css';
 import arrow from '../../../public/arrow-right.svg';
+import CardItem from '../CardItem';
+
+const cardInfo = [
+    {
+        title: 'Versatile Fleet Selection',
+        body: 'Discover the perfect ride for anyoccasion from our diverse andwell-maintained fleet, ranging fromfuel-efficient compacts to spacious SUVsand luxurious sedans.',
+        imgSrc: '../../../public/cars.jpg',
+    },
+    {
+        title: 'Customer-Focused Service',
+        body: ' Experience hassle-free rentals with ourdedicated team committed to transparentpricing, straightforward policies, andpersonalized assistance, ensuring yoursatisfaction from inquiry to vehiclereturn.',
+        imgSrc: '../../../public/customer-service.jpg',
+    },
+    {
+        title: 'Modern Comfort and Innovation',
+        body: ' Enjoy the future of travel with ourvehicles equipped with cutting-edgein-car technologies, providing aseamless blend of comfort and innovationfor a memorable and enjoyable journey.',
+        imgSrc: '../../../public/comfor-car.jpg',
+    },
+];
 
 function Aboutus() {
+    
     return (
-        <section className="aboutus-section" id='about'>
+        <section className="aboutus-section" id="about">
             <div className="container">
                 <div className="row">
                     <div className="col-12 texts">
@@ -26,7 +46,7 @@ function Aboutus() {
                             facilitating the adventures that shape your story.
                             <br />
                             <span className="explore-link">
-                                Explore our cars
+                                <a href="#cars">Explore our cars</a>
                                 <img src={arrow} alt="A right arrow" />
                             </span>
                         </p>
@@ -36,61 +56,9 @@ function Aboutus() {
                     <h2>
                         <span>Why</span> us
                     </h2>
-                    <div className="col-12 col-lg-4">
-                        <div className="card">
-                            <div className="bg-back">
-                                <div className="card-body">
-                                    <h3 className="card-title">
-                                        Versatile Fleet Selection
-                                    </h3>
-                                    <p className="card-text">
-                                        Discover the perfect ride for any
-                                        occasion from our diverse and
-                                        well-maintained fleet, ranging from
-                                        fuel-efficient compacts to spacious SUVs
-                                        and luxurious sedans.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-12 col-lg-4">
-                        <div className="card">
-                            <div className="bg-back">
-                                <div className="card-body">
-                                    <h3 className="card-title">
-                                        Customer-Focused Service
-                                    </h3>
-                                    <p className="card-text">
-                                        Experience hassle-free rentals with our
-                                        dedicated team committed to transparent
-                                        pricing, straightforward policies, and
-                                        personalized assistance, ensuring your
-                                        satisfaction from inquiry to vehicle
-                                        return.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-12 col-lg-4">
-                        <div className="card">
-                            <div className="bg-back">
-                                <div className="card-body">
-                                    <h3 className="card-title">
-                                        Modern Comfort and Innovation
-                                    </h3>
-                                    <p className="card-text">
-                                        Enjoy the future of travel with our
-                                        vehicles equipped with cutting-edge
-                                        in-car technologies, providing a
-                                        seamless blend of comfort and innovation
-                                        for a memorable and enjoyable journey.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    {cardInfo.map(currObj => (
+                        <CardItem cardContent={currObj} key={currObj.title} />
+                    ))}
                 </div>
             </div>
         </section>

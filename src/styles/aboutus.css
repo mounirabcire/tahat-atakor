@@ -43,6 +43,10 @@
     cursor: pointer;
 }
 
+.explore-link a {
+    color: var(--white-color);
+}
+
 .explore-link img {
     width: 20px;
     height: 20px;
@@ -59,18 +63,26 @@
 }
 
 .aboutus-section .card {
-    height: 350px;
+    height: 450px;
     border: 1px solid var(--gray2-color);
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.116);
-    background-image: url('../../public/customer-service.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     color: var(--white-color);
+    position: relative;
 }
 
-.aboutus-section .card .bg-back{
+.aboutus-section .card img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.aboutus-section .card .bg-back {
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -83,9 +95,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0);
-    backdrop-filter: blur(20px);
-    width: 80%;
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(2px);
 }
 
 .aboutus-section .card .card-body p {
