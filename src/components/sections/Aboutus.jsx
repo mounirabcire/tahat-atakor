@@ -1,8 +1,5 @@
 import '../../styles/aboutus.css';
 import arrow from '../../../public/arrow-right.svg';
-import img1 from '../../../public/cars.jpg';
-import img2 from '../../../public/customer-service.jpg';
-import img3 from '../../../public/comfor-car.jpg';
 import CardItem from '../CardItem';
 
 const cardInfo = [
