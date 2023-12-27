@@ -9,17 +9,17 @@ const cardInfo = [
     {
         title: 'Versatile Fleet Selection',
         body: 'Discover the perfect ride for anyoccasion from our diverse andwell-maintained fleet, ranging fromfuel-efficient compacts to spacious SUVsand luxurious sedans.',
-        imgSrc: img1,
+        imgSrc: '../../public/cars.jpg',
     },
     {
         title: 'Customer-Focused Service',
         body: ' Experience hassle-free rentals with ourdedicated team committed to transparentpricing, straightforward policies, andpersonalized assistance, ensuring yoursatisfaction from inquiry to vehiclereturn.',
-        imgSrc: img2,
+        imgSrc: '../../public/customer-service.jpg',
     },
     {
         title: 'Modern Comfort and Innovation',
         body: ' Enjoy the future of travel with ourvehicles equipped with cutting-edgein-car technologies, providing aseamless blend of comfort and innovationfor a memorable and enjoyable journey.',
-        imgSrc: img3,
+        imgSrc: '../../public/comfor-car.jpg',
     },
 ];
 
