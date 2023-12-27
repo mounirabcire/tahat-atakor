@@ -1,27 +1,29 @@
 import '../../styles/aboutus.css';
 import arrow from '../../../public/arrow-right.svg';
+import img1 from '../../../public/cars.jpg';
+import img2 from '../../../public/customer-service.jpg';
+import img3 from '../../../public/comfor-car.jpg';
 import CardItem from '../CardItem';
 
 const cardInfo = [
     {
         title: 'Versatile Fleet Selection',
         body: 'Discover the perfect ride for anyoccasion from our diverse andwell-maintained fleet, ranging fromfuel-efficient compacts to spacious SUVsand luxurious sedans.',
-        imgSrc: '../../../public/cars.jpg',
+        imgSrc: img1,
     },
     {
         title: 'Customer-Focused Service',
         body: ' Experience hassle-free rentals with ourdedicated team committed to transparentpricing, straightforward policies, andpersonalized assistance, ensuring yoursatisfaction from inquiry to vehiclereturn.',
-        imgSrc: '../../../public/customer-service.jpg',
+        imgSrc: img2,
     },
     {
         title: 'Modern Comfort and Innovation',
         body: ' Enjoy the future of travel with ourvehicles equipped with cutting-edgein-car technologies, providing aseamless blend of comfort and innovationfor a memorable and enjoyable journey.',
-        imgSrc: '../../../public/comfor-car.jpg',
+        imgSrc: img3,
     },
 ];
 
 function Aboutus() {
-    
     return (
         <section className="aboutus-section" id="about">
             <div className="container">
