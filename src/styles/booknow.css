@@ -11,7 +11,7 @@
 }
 
 .img-holder img {
-    width: 100%;
+    width: 80%;
 }
 
 .book-section h2 {
@@ -63,6 +63,28 @@
     outline: none;
 }
 
+/* Override styles from react-datepicker */
+.react-datepicker-wrapper {
+    width: 100%;
+}
+
+.react-datepicker {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.react-datepicker__input-container input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--red-color);
+    background: transparent;
+    color: var(--white-color);
+    border-radius: 5px;
+}
+
+input::placeholder {
+    color: var(--gray1-color);
+}
+
 /* .msgArea {
     height: 200px;
 } */
@@ -111,7 +133,7 @@
     transition: all 0.2s;
 }
 
-.book-section select{
+.book-section select {
     width: 100%;
     padding: 10px 0;
     background-color: transparent;
@@ -120,7 +142,7 @@
     color: var(--white-color);
 }
 
-.book-section select option{
+.book-section select option {
     background: var(--black-color);
     color: var(--white-color);
 }

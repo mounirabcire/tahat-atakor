@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import DatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
 import car1 from '../../../public/car1.png';
 import car2 from '../../../public/car2.png';
 import car3 from '../../../public/car3.png';
@@ -20,16 +22,16 @@ function BookNow() {
                     </h2>
                     <div className="img-holder col-12 col-lg-6">
                         {cars === 'car1' && (
-                            <img src={car1} alt="A car" className="img-fluid" />
+                            <img src={car1} alt="A car" className="" />
                         )}
                         {cars === 'car2' && (
-                            <img src={car2} alt="A car" className="img-fluid" />
+                            <img src={car2} alt="A car" className="" />
                         )}
                         {cars === 'car3' && (
-                            <img src={car3} alt="A car" className="img-fluid" />
+                            <img src={car3} alt="A car" className="" />
                         )}
                         {cars === 'car4' && (
-                            <img src={car4} alt="A car" className="img-fluid" />
+                            <img src={car4} alt="A car" className="" />
                         )}
                     </div>
                     <div className="col-12 col-lg-6">
@@ -48,27 +50,19 @@ function BookNow() {
                                 />
                             </div>
                             <div className="inputBox">
-                                <input
-                                    className="inputText"
-                                    type="date"
-                                    name="user-start-date"
-                                    id="contact-email"
-                                    placeholder="Start date..."
-                                    value={startDate}
-                                    onChange={e => setStartDate(e.target.value)}
-                                    required
+                                <DatePicker
+                                    selected={startDate}
+                                    onChange={date => setStartDate(date)}
+                                    dateFormat="yyyy-MM-dd"
+                                    placeholderText="Select the start date..."
                                 />
                             </div>
                             <div className="inputBox">
-                                <input
-                                    className="inputText"
-                                    type="date"
-                                    name="user-end-date"
-                                    id="contact-email"
-                                    placeholder="End date..."
-                                    value={endDate}
-                                    onChange={e => setEndDate(e.target.value)}
-                                    required
+                            <DatePicker
+                                    selected={endDate}
+                                    onChange={date => setEndDate(date)}
+                                    dateFormat="yyyy-MM-dd"
+                                    placeholderText="Select the end date..."
                                 />
                             </div>
                             <div className="inputBox">
