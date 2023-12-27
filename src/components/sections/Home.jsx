@@ -2,12 +2,18 @@ import { useState } from 'react';
 
 import logo from '../../../public/logo-white.svg';
 import MenuBar from '../MenuBar';
-import '../../styles/home.css';
 import PagesLinks from '../PagesLinks';
 import Button from '../Button';
+import bgImg from '../../../public/bg.jpg';
+import '../../styles/home.css';
 
 function Home() {
     const [isVisible, setIsVisible] = useState(false);
+    const style = {
+        background: `url(${bgImg}) no-repeat fixed center`,
+        backgroundSize: 'cover',
+        position: 'relative',
+    };
 
     function handleVisibility() {
         setIsVisible(pre => !pre);
@@ -15,7 +21,7 @@ function Home() {
 
     return (
         <header className="home-section" id="home">
-            <div className="bg-img">
+            <div className="bg-img" style={style}>
                 <div className="bg-back">
                     <div className="container">
                         {isVisible && (
