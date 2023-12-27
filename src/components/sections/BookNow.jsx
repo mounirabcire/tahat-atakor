@@ -53,15 +53,15 @@ function BookNow() {
                                 <DatePicker
                                     selected={startDate}
                                     onChange={date => setStartDate(date)}
-                                    dateFormat="yyyy-MM-dd"
+                                    dateFormat="dd-MM-yyyy"
                                     placeholderText="Select the start date..."
                                 />
                             </div>
                             <div className="inputBox">
-                            <DatePicker
+                                <DatePicker
                                     selected={endDate}
                                     onChange={date => setEndDate(date)}
-                                    dateFormat="yyyy-MM-dd"
+                                    dateFormat="dd-MM-yyyy"
                                     placeholderText="Select the end date..."
                                 />
                             </div>

@@ -33,7 +33,7 @@ function Contact() {
                     <div className="col-12 col-lg-4">
                         <h4>Information</h4>
                         <div>
-                            <p>0551928807</p>
+                            <p>0668065962</p>
                             <p>
                                 10, Rue El chahid chakeur chikh, logement 592
                                 CNL, Oran, Algerie
@@ -43,6 +43,50 @@ function Contact() {
                     </div>
                     <div className="col-12 col-lg-4">
                         <h4>Social Media</h4>
+                        <div>
+                            <ul className='social-list'>
+                                <li>
+                                    <a
+                                        href="https://www.instagram.com/tahat.atakor31"
+                                        title="Instagram"
+                                        target="_blank"
+                                        rel="noreferrer"
+                                    >
+                                        <i class="ri-instagram-line"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a
+                                        href="https://www.facebook.com/profile.php?id=61553652307306"
+                                        title="Facebook"
+                                        target="_blank"
+                                        rel="noreferrer"
+                                    >
+                                        <i class="ri-facebook-line"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a
+                                        href="mailto:tahatatakor31@gamil.com"
+                                        title="Mail"
+                                        target="_blank"
+                                        rel="noreferrer"
+                                    >
+                                        <i class="ri-mail-line"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a
+                                        href="http://wa.me/0551928807"
+                                        title="Whatsapp"
+                                        target="_blank"
+                                        rel="noreferrer"
+                                    >
+                                        <i class="ri-whatsapp-line"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
                 <p className="copyRight">

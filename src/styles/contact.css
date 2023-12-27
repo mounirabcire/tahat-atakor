@@ -52,3 +52,16 @@
 .contact-section .row > div > div {
     margin-block: 15px;
 }
+
+.social-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.social-list li{
+    margin-right: 30px;
+}
+
+
