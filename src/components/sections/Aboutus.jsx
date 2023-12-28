@@ -49,7 +49,7 @@ function Aboutus() {
                             <br />
                             <span className="explore-link">
                                 <a href="#cars">Explore our cars</a>
-                                <i class="ri-arrow-right-line"></i>
+                                <i className="ri-arrow-right-line"></i>
                             </span>
                         </p>
                     </div>
@@ -58,10 +58,10 @@ function Aboutus() {
                     <h2>
                         <span>Why</span> us
                     </h2>
-                    {/* {cardInfo.map(currObj => (
+                    {cardInfo.map(currObj => (
                         <CardItem cardContent={currObj} key={currObj.title} />
-                    ))} */}
-                    {cardInfo.map(card => (
+                    ))}
+                    {/* {cardInfo.map(card => (
                         <div className="col-12 col-lg-4">
                             <div className="card">
                                 <img src={card.imgSrc} alt="A background" />
@@ -73,7 +73,7 @@ function Aboutus() {
                                 </div>
                             </div>
                         </div>
-                    ))}
+                    ))} */}
                 </div>
             </div>
         </section>

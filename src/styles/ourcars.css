@@ -1,0 +1,109 @@
+/* OUR CARS SECTION  */
+.cars-section {
+    /* min-height: 100vh; */
+    margin-bottom: 60px;
+    padding: 0 15px;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.cars-section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 60px;
+    font-size: var(--h2-size);
+}
+
+.cars-section span {
+    padding: 0 15px;
+    background-color: var(--red-color);
+    border-radius: 5px;
+    color: var(--white-color);
+}
+
+.slider-wrapper{
+    width: 100%;
+    max-width: 500px;
+    height: 400px;
+    /* border: 1px solid; */
+    border-radius: 5px;
+    /* box-shadow: 5px 5px 20px rgb(0, 0, 0, .4); */
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.slider-wrapper .img-holder{
+    width: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    backdrop-filter: blur(20px);
+    /* border: 1px solid red; */
+}
+
+.slider-wrapper .img-holder img{
+    width: auto;
+    transition: all .3s
+}
+
+.icon{
+    position: absolute;
+    z-index: 20;
+    cursor: pointer;
+}
+
+.left-icon{
+    top: 50%;
+    left: -15px;
+    transform: translateY(-50%);
+}
+
+.right-icon{
+    bottom: 50%;
+    right: -15px;
+    transform: translateY(50%);
+}
+
+.icon i{
+    font-size: 50px;
+    color: var(--black-color);
+}
+
+.circles{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 5px;
+    right: 50%;
+    transform: translatex(50%);
+}
+
+.circles div{
+    margin-left: 5px;
+    height: 5px;
+    width: 23px;
+    border-radius: 10px;
+    background-color: var(--black-color);
+    cursor: pointer;
+}
+
+div.active-circle{
+    border: 1px solid var(--black-color);
+    background: transparent;
+}

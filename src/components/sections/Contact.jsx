@@ -52,7 +52,7 @@ function Contact() {
                                         target="_blank"
                                         rel="noreferrer"
                                     >
-                                        <i class="ri-instagram-line"></i>
+                                        <i className="ri-instagram-line"></i>
                                     </a>
                                 </li>
                                 <li>
@@ -62,7 +62,7 @@ function Contact() {
                                         target="_blank"
                                         rel="noreferrer"
                                     >
-                                        <i class="ri-facebook-line"></i>
+                                        <i className="ri-facebook-line"></i>
                                     </a>
                                 </li>
                                 <li>
@@ -72,7 +72,7 @@ function Contact() {
                                         target="_blank"
                                         rel="noreferrer"
                                     >
-                                        <i class="ri-mail-line"></i>
+                                        <i className="ri-mail-line"></i>
                                     </a>
                                 </li>
                                 <li>
@@ -82,7 +82,7 @@ function Contact() {
                                         target="_blank"
                                         rel="noreferrer"
                                     >
-                                        <i class="ri-whatsapp-line"></i>
+                                        <i className="ri-whatsapp-line"></i>
                                     </a>
                                 </li>
                             </ul>
