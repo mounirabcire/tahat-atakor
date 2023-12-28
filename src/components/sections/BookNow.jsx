@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
-import car1 from '../../../public/car1.png';
-import car2 from '../../../public/car2.png';
-import car3 from '../../../public/car3.png';
-import car4 from '../../../public/car4.png';
+import car1 from '../../assets/car1.png';
+import car2 from '../../assets/car2.png';
+import car3 from '../../assets/car3.png';
+import car4 from '../../assets/car4.png';
 import '../../styles/booknow.css';
 
 function BookNow() {

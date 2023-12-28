@@ -1,5 +1,4 @@
-
-
+// import img from '../assets/cars.jpg'
 function CardItem({ cardContent }) {
     const { title, body, imgSrc } = cardContent;
 

@@ -1,4 +1,4 @@
-import close from '../../public/close.svg';
+// import close from '../assets/close.svg';
 import PagesLinks from './PagesLinks';
 
 function MenuBar({ handleVisibility, isVisible }) {
@@ -9,11 +9,7 @@ function MenuBar({ handleVisibility, isVisible }) {
             }`}
         >
             <div className="close-icon">
-                <img
-                    src={close}
-                    alt="A close icon"
-                    onClick={handleVisibility}
-                />
+                <i class="ri-close-line"></i>
             </div>
             <PagesLinks
                 parentClassName="links-menu-bar"

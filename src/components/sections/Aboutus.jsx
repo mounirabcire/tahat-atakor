@@ -1,22 +1,25 @@
 import '../../styles/aboutus.css';
-import arrow from '../../../public/arrow-right.svg';
 import CardItem from '../CardItem';
+
+import cars from '../../assets/cars.jpg'
+import customers from '../../assets/customer-service.jpg'
+import comforCar from '../../assets/comfor-car.jpg'
 
 const cardInfo = [
     {
         title: 'Versatile Fleet Selection',
         body: 'Discover the perfect ride for anyoccasion from our diverse andwell-maintained fleet, ranging fromfuel-efficient compacts to spacious SUVsand luxurious sedans.',
-        imgSrc: '../../public/cars.jpg',
+        imgSrc: cars,
     },
     {
         title: 'Customer-Focused Service',
         body: ' Experience hassle-free rentals with ourdedicated team committed to transparentpricing, straightforward policies, andpersonalized assistance, ensuring yoursatisfaction from inquiry to vehiclereturn.',
-        imgSrc: '../../public/customer-service.jpg',
+        imgSrc: customers,
     },
     {
         title: 'Modern Comfort and Innovation',
         body: ' Enjoy the future of travel with ourvehicles equipped with cutting-edgein-car technologies, providing aseamless blend of comfort and innovationfor a memorable and enjoyable journey.',
-        imgSrc: '../../public/comfor-car.jpg',
+        imgSrc: comforCar,
     },
 ];
 
@@ -46,7 +49,7 @@ function Aboutus() {
                             <br />
                             <span className="explore-link">
                                 <a href="#cars">Explore our cars</a>
-                                <img src={arrow} alt="A right arrow" />
+                                <i class="ri-arrow-right-line"></i>
                             </span>
                         </p>
                     </div>
@@ -55,8 +58,21 @@ function Aboutus() {
                     <h2>
                         <span>Why</span> us
                     </h2>
-                    {cardInfo.map(currObj => (
+                    {/* {cardInfo.map(currObj => (
                         <CardItem cardContent={currObj} key={currObj.title} />
+                    ))} */}
+                    {cardInfo.map(card => (
+                        <div className="col-12 col-lg-4">
+                            <div className="card">
+                                <img src={card.imgSrc} alt="A background" />
+                                <div className="bg-back">
+                                    <div className="card-body">
+                                        <h3 className="card-title">{card.title}</h3>
+                                        <p className="card-text">{card.body}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     ))}
                 </div>
             </div>

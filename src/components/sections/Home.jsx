@@ -1,10 +1,10 @@
 import { useState } from 'react';
 
-import logo from '../../../public/logo-white.svg';
 import MenuBar from '../MenuBar';
 import PagesLinks from '../PagesLinks';
 import Button from '../Button';
-import bgImg from '../../../public/bg.jpg';
+import logo from '../../assets/logo-white.svg';
+import bgImg from '../../assets/bg.jpg';
 import '../../styles/home.css';
 
 function Home() {

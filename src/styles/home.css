@@ -121,9 +121,8 @@
     cursor: pointer;
 }
 
-.close-icon img {
-    width: 35px;
-    height: 35px;
+.close-icon i {
+    font-size: 35px;
 }
 
 .links {
