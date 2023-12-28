@@ -1,35 +1,42 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 function PagesLinks({ onClick = null, parentClassName }) {
     const [language, setLanguage] = useState('');
+
+    useEffect(() => {
+        const aNoeads = document.querySelectorAll('.links a');
+        const aEl = Array.from(aNoeads);
+
+        aEl.forEach(currEl => {
+            currEl.addEventListener('click', () => {
+                for (let i = 0; i < aEl.length; i++) {
+                    aEl[i].classList.remove('active-link');
+                }
+                currEl.classList.add('active-link');
+            });
+        });
+        console.log(aEl);
+    }, []);
 
     return (
         <div className={`links ${parentClassName}`}>
             <ul>
                 <li>
-                    <a href="#home" className="active-link" onClick={onClick}>
+                    <a href="#home" className="active-link">
                         Home
                     </a>
                 </li>
                 <li>
-                    <a href="#about" onClick={onClick}>
-                        About us
-                    </a>
+                    <a href="#about">About us</a>
                 </li>
                 <li>
-                    <a href="#cars" onClick={onClick}>
-                        Cars
-                    </a>
+                    <a href="#cars">Cars</a>
                 </li>
                 <li>
-                    <a href="#booking" onClick={onClick}>
-                        Book now
-                    </a>
+                    <a href="#booking">Book now</a>
                 </li>
                 <li>
-                    <a href="#contact" onClick={onClick}>
-                        Contact
-                    </a>
+                    <a href="#contact">Contact</a>
                 </li>
                 <li>
                     <select
