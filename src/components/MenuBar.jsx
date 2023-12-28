@@ -9,7 +9,7 @@ function MenuBar({ handleVisibility, isVisible }) {
             }`}
         >
             <div className="close-icon">
-                <i className="ri-close-line"></i>
+                <i onClick={handleVisibility} className="ri-close-line"></i>
             </div>
             <PagesLinks
                 parentClassName="links-menu-bar"

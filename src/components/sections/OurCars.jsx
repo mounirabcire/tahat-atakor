@@ -42,14 +42,16 @@ function OurCars() {
                 ))}
 
                 <div className="circles">
-                    {cars.map((_, index) => (
+                    {cars.map((car, index) => (
                         <div
-                            onClick={()=>setCurrentCarIndex(index)}
+                            onClick={() => setCurrentCarIndex(index)}
                             key={index}
                             className={`${
                                 index === currentCarIndex ? 'active-circle' : ''
                             }`}
-                        ></div>
+                        >
+                            <img src={car} alt="A car" />
+                        </div>
                     ))}
                 </div>
                 <div className="icon right-icon" onClick={handleNextCar}>
