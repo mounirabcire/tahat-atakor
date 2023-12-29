@@ -1,42 +1,70 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 function PagesLinks({ onClick = null, parentClassName }) {
-    const [language, setLanguage] = useState('');
+    const [activeLink, setActiveLink] = useState('Home');
+    const [language, setLanguage] = useState('En');
 
-    useEffect(() => {
-        const aNoeads = document.querySelectorAll('.links a');
-        const aEl = Array.from(aNoeads);
-
-        aEl.forEach(currEl => {
-            currEl.addEventListener('click', () => {
-                for (let i = 0; i < aEl.length; i++) {
-                    aEl[i].classList.remove('active-link');
-                }
-                currEl.classList.add('active-link');
-            });
-        });
-        console.log(aEl);
-    }, []);
+    function handleActiveLink(link) {
+        setActiveLink(link);
+    }
 
     return (
         <div className={`links ${parentClassName}`}>
             <ul>
                 <li>
-                    <a href="#home" className="active-link">
+                    <a
+                        href="#home"
+                        className={`${
+                            activeLink === 'Home' ? 'active-link' : ''
+                        }`}
+                        onClick={e => handleActiveLink(e.target.innerHTML)}
+                    >
                         Home
                     </a>
                 </li>
                 <li>
-                    <a href="#about">About us</a>
+                    <a
+                        href="#about"
+                        className={`${
+                            activeLink === 'About us' ? 'active-link' : ''
+                        }`}
+                        onClick={e => handleActiveLink(e.target.innerHTML)}
+                    >
+                        About us
+                    </a>
                 </li>
                 <li>
-                    <a href="#cars">Cars</a>
+                    <a
+                        href="#cars"
+                        className={`${
+                            activeLink === 'Cars' ? 'active-link' : ''
+                        }`}
+                        onClick={e => handleActiveLink(e.target.innerHTML)}
+                    >
+                        Cars
+                    </a>
                 </li>
                 <li>
-                    <a href="#booking">Book now</a>
+                    <a
+                        href="#booking"
+                        className={`${
+                            activeLink === 'Book now' ? 'active-link' : ''
+                        }`}
+                        onClick={e => handleActiveLink(e.target.innerHTML)}
+                    >
+                        Book now
+                    </a>
                 </li>
                 <li>
-                    <a href="#contact">Contact</a>
+                    <a
+                        href="#contact"
+                        className={`${
+                            activeLink === 'Contact' ? 'active-link' : ''
+                        }`}
+                        onClick={e => handleActiveLink(e.target.innerHTML)}
+                    >
+                        Contact
+                    </a>
                 </li>
                 <li>
                     <select

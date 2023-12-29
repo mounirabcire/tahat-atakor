@@ -24,12 +24,16 @@ function Home() {
             <div className="bg-img" style={style}>
                 <div className="bg-back">
                     <div className="container">
-                        {isVisible && (
+                        {/* {isVisible && (
                             <MenuBar
                                 handleVisibility={handleVisibility}
                                 isVisible={isVisible}
                             />
-                        )}
+                        )} */}
+                        <MenuBar
+                            handleVisibility={handleVisibility}
+                            isVisible={isVisible}
+                        />
                         <nav>
                             <div className="row">
                                 <div className="logo col-6">

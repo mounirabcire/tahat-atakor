@@ -17,14 +17,6 @@ function BookNow() {
     const [cars, setCars] = useState('Mercedes Benz');
     const form = useRef(null);
 
-    const templateParams = {
-        user_name: fullName,
-        user_email: email,
-        user_car: cars,
-        start_date: startDate,
-        end_date: endDate,
-    };
-
     function sendEmail(e) {
         e.preventDefault();
 
