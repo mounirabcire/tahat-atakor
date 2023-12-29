@@ -6,6 +6,34 @@ import Button from '../Button';
 import logo from '../../assets/logo-white.svg';
 import bgImg from '../../assets/bg.jpg';
 import '../../styles/home.css';
+import { motion } from 'framer-motion';
+
+const parentVariants = {
+    hidden: {
+        color: 'transparent',
+    },
+    visible: {
+        color: 'white',
+        transition: {
+            delay: 1.7,
+            type: 'tween',
+        },
+    },
+};
+
+const childrenVariants = {
+    hidden: {
+        x: '-100vw',
+    },
+    visible: {
+        x: '100vw',
+        transition: {
+            duration: 2,
+            delay: 1,
+            type: 'tween',
+        },
+    },
+};
 
 function Home() {
     const [isVisible, setIsVisible] = useState(false);
@@ -56,24 +84,57 @@ function Home() {
                         <section>
                             <div className="row">
                                 <div className="headings col-12">
-                                    <h1>
+                                    <motion.h1
+                                        variants={parentVariants}
+                                        initial={'hidden'}
+                                        animate={'visible'}
+                                    >
                                         Book Your Adventure: Find the Perfect{' '}
                                         <span>Rental Car</span> for Your Next
                                         Trip
-                                    </h1>
-                                    <h4>
+                                        <motion.span
+                                            className="box"
+                                            variants={childrenVariants}
+                                            initial={'hidden'}
+                                            animate={'visible'}
+                                            // transition={{delay: 12}
+                                        ></motion.span>
+                                    </motion.h1>
+                                    <motion.h4
+                                        variants={parentVariants}
+                                        initial={'hidden'}
+                                        animate={'visible'}
+                                    >
                                         Hit the Road in Style with Our Fleet of
                                         High-Performance Rental Cars
-                                    </h4>
+                                        <motion.span
+                                            className="box"
+                                            variants={childrenVariants}
+                                            initial={'hidden'}
+                                            animate={'visible'}
+                                            // transition={{delay: 22}
+                                        ></motion.span>
+                                    </motion.h4>
                                 </div>
-                                <div className="btns col-12">
+                                <motion.div
+                                    variants={parentVariants}
+                                    initial={'hidden'}
+                                    animate={'visible'}
+                                    className="btns col-12"
+                                >
                                     <Button isLink={true} pageLink="booking">
                                         Book now
                                     </Button>
+                                    <motion.span
+                                        className="box"
+                                        variants={childrenVariants}
+                                        initial={'hidden'}
+                                        animate={'visible'}
+                                    ></motion.span>
                                     <Button isLink={true} pageLink="cars">
                                         See all cars
                                     </Button>
-                                </div>
+                                </motion.div>
                             </div>
                         </section>
                     </div>

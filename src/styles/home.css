@@ -4,9 +4,10 @@
     min-height: 100vh;
     position: relative;
     color: var(--white-color);
+    overflow-x: hidden;
 }
 
-.home-section .row{
+.home-section .row {
     align-items: center;
     justify-content: space-between;
 }
@@ -15,11 +16,11 @@
     padding: 5px 0 0 0;
 }
 
-.logo{
+.logo {
     width: auto;
 }
 
-.pagesLinks{
+.pagesLinks {
     width: 50%;
 }
 
@@ -66,6 +67,8 @@
     max-width: 620px;
     font-size: calc(var(--h1-size) - 47px);
     font-weight: 200;
+    position: relative;
+    overflow-x: hidden;
 }
 
 .headings h1 span {
@@ -77,6 +80,13 @@
 .headings h4 {
     font-size: calc(var(--h4-size) - 7px);
     font-weight: 300;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.btns{
+    position: relative;
+    overflow-x: hidden;
 }
 
 .btns button:first-child {
@@ -142,16 +152,15 @@
     display: none;
 }
 
-.links a{
+.links a {
     padding: 5px 15px;
     background-color: transparent;
     border-radius: 5px;
 
-    transition: padding .3s,
-    background .3s;
+    transition: padding 0.3s, background 0.3s;
 }
 
-.links a:hover{
+.links a:hover {
     padding: 5px 15px;
     background: var(--red-color);
 }
@@ -207,6 +216,17 @@ a.active-link {
     background-color: var(--red-color);
 }
 
+span.box {
+    width: 100%;
+    height: 100%;
+    background-color: var(--white-color) !important;
+    border-radius: 0 !important;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+}
+
 /* RESPONSIVENESS */
 @media screen and (min-width: 648px) {
     .headings h1 {
@@ -221,7 +241,7 @@ a.active-link {
 }
 
 @media screen and (min-width: 1024px) {
-    .pagesLinks{
+    .pagesLinks {
         width: 80%;
     }
 
@@ -239,7 +259,7 @@ a.active-link {
         justify-content: center;
         align-items: center;
     }
-    
+
     .links-nav ul {
         width: 100%;
         height: 100%;
@@ -248,7 +268,7 @@ a.active-link {
         align-items: center;
     }
 
-    .links-nav ul li{
+    .links-nav ul li {
         margin-left: 15px;
     }
 
@@ -256,7 +276,7 @@ a.active-link {
         font-size: calc(var(--small-size) + 2.5px);
         color: var(--white-color);
     }
-    
+
     .links-nav ul li select {
         padding: 2.5px 5px;
         color: var(--white-color);
@@ -265,10 +285,9 @@ a.active-link {
         font-size: calc(var(--small-size) + 2.5px);
         outline: none;
     }
-    
+
     .links-nav ul li select option {
         background-color: var(--black-color);
         font-size: calc(var(--small-size) + 2.5px);
     }
 }
-
