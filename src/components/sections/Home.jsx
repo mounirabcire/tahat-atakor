@@ -35,7 +35,7 @@ function Home() {
                                 <div className="logo col-6">
                                     <img src={logo} alt="A logo" />
                                 </div>
-                                <div className="col-6">
+                                <div className="pagesLinks col-6">
                                     <div
                                         className="menu"
                                         onClick={() => {

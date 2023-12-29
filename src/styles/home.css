@@ -6,8 +6,21 @@
     color: var(--white-color);
 }
 
+.home-section .row{
+    align-items: center;
+    justify-content: space-between;
+}
+
 .home-section nav {
     padding: 5px 0 0 0;
+}
+
+.logo{
+    width: auto;
+}
+
+.pagesLinks{
+    width: 50%;
 }
 
 .menu {
@@ -208,6 +221,10 @@ a.active-link {
 }
 
 @media screen and (min-width: 1024px) {
+    .pagesLinks{
+        width: 80%;
+    }
+
     .menu {
         display: none;
     }
@@ -227,8 +244,12 @@ a.active-link {
         width: 100%;
         height: 100%;
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-end;
         align-items: center;
+    }
+
+    .links-nav ul li{
+        margin-left: 15px;
     }
 
     .links-nav ul li a {

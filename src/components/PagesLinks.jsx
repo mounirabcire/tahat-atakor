@@ -43,9 +43,9 @@ function PagesLinks({ onClick = null, parentClassName }) {
                         value={language}
                         onChange={e => setLanguage(e.target.value)}
                     >
-                        <option value="En">En</option>
-                        <option value="Ar">Ar</option>
-                        <option value="Fr">Fr</option>
+                        <option value="En">English</option>
+                        <option value="Ar">Arabic</option>
+                        <option value="Fr">French</option>
                     </select>
                 </li>
             </ul>

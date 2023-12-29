@@ -54,12 +54,12 @@ function OurCars() {
                         </div>
                     ))}
                 </div>
-                <div className="icon right-icon" onClick={handleNextCar}>
+                {/* <div className="icon right-icon" onClick={handleNextCar}>
                     <i className="ri-arrow-right-s-line"></i>
                 </div>
                 <div className="icon left-icon" onClick={handlePreviousCar}>
                     <i className="ri-arrow-left-s-line"></i>
-                </div>
+                </div> */}
             </div>
         </section>
     );
