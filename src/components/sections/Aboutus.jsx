@@ -1,9 +1,12 @@
 import '../../styles/aboutus.css';
 import CardItem from '../CardItem';
 
-import cars from '../../assets/cars.jpg'
-import customers from '../../assets/customer-service.jpg'
-import comforCar from '../../assets/comfor-car.jpg'
+import cars from '../../assets/cars.jpg';
+import customers from '../../assets/customer-service.jpg';
+import comforCar from '../../assets/comfor-car.jpg';
+import { motion, useInView } from 'framer-motion';
+import { useRef } from 'react';
+import { useEffect } from 'react';
 
 const cardInfo = [
     {
@@ -24,15 +27,44 @@ const cardInfo = [
 ];
 
 function Aboutus() {
+    const h2Box = useRef(null);
+    const isInView = useInView(h2Box, { once: true, amount: 'all' });
+
+    const pBox = useRef(null);
+    const isInViewP = useInView(pBox, { once: true, amount: .7 });
+
+    // useEffect(() => {
+    //     console.log(`is in view ---> ${isInView}`);
+    // }, [isInView]);
+
     return (
         <section className="aboutus-section" id="about">
             <div className="container">
                 <div className="row">
                     <div className="col-12 texts">
-                        <h2>
+                        <motion.h2
+                            ref={h2Box}
+                            initial={{ color: 'transparent' }}
+                            animate={{ color: isInView ? 'black' : '' }}
+                            transition={{ delay: 1 }}
+                        >
                             <span>Who</span> Are we
-                        </h2>
-                        <p>
+                            <motion.span
+                                initial={{ x: '0' }}
+                                animate={{ x: isInView ? '100vw' : '' }}
+                                transition={{
+                                    duration: 0.4,
+                                    delay: 0.4,
+                                }}
+                                className="box"
+                            ></motion.span>
+                        </motion.h2>
+                        <motion.p
+                            ref={pBox}
+                            initial={{ color: 'transparent' }}
+                            animate={{ color: isInViewP ? 'black' : '' }}
+                            transition={{ delay: 1 }}
+                        >
                             Welcome to <span>Tahat Atakor</span> Your Trusted
                             Partner in Adventure! At <span>Tahat Atakor</span>{' '}
                             we believe in the power of exploration and the
@@ -51,7 +83,16 @@ function Aboutus() {
                                 <a href="#cars">Explore our cars</a>
                                 <i className="ri-arrow-right-line"></i>
                             </span>
-                        </p>
+                            <motion.span
+                                initial={{ x: '0' }}
+                                animate={{ x: isInViewP ? '100vw' : '' }}
+                                transition={{
+                                    duration: 0.4,
+                                    delay: 0.4,
+                                }}
+                                className="box"
+                            ></motion.span>
+                        </motion.p>
                     </div>
                 </div>
                 <div className="row">

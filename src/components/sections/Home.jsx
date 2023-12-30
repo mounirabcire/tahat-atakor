@@ -28,7 +28,7 @@ const childrenVariants = {
     visible: {
         x: '100vw',
         transition: {
-            duration: 0.8,
+            duration: 1,
             delay: 1,
             type: 'tween',
         },

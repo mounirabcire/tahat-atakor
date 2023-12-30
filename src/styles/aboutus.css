@@ -1,6 +1,7 @@
 /* ABOUT US SECTION  */
 .aboutus-section {
     min-height: 100vh;
+    overflow-x: hidden;
 }
 
 .texts {
@@ -12,6 +13,8 @@
     margin-bottom: 15px;
     margin-top: 60px;
     font-size: var(--h2-size);
+    position: relative;
+    overflow: hidden;
 }
 
 .texts p {
@@ -19,6 +22,7 @@
     line-height: 1.8;
     background: #e534243a;
     border-radius: 5px;
+    position: relative;
 }
 
 .aboutus-section span {
@@ -109,6 +113,17 @@
 
 .aboutus-section h3 {
     font-size: var(--h4-size);
+}
+
+.aboutus-section span.box{
+    width: 100%;
+    height: 100%;
+    background-color: var(--white-color) !important;
+    border-radius: 0 !important;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
 }
 
 /* RESPONSIVENEES */

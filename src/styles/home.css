@@ -216,7 +216,7 @@ a.active-link {
     background-color: var(--red-color);
 }
 
-span.box {
+.home-section span.box {
     width: 100%;
     height: 100%;
     background-color: var(--white-color) !important;
