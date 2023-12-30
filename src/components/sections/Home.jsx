@@ -6,7 +6,7 @@ import Button from '../Button';
 import logo from '../../assets/logo-white.svg';
 import bgImg from '../../assets/bg.jpg';
 import '../../styles/home.css';
-import { motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 
 const parentVariants = {
     hidden: {
@@ -28,7 +28,7 @@ const childrenVariants = {
     visible: {
         x: '100vw',
         transition: {
-            duration: .8,
+            duration: 0.8,
             delay: 1,
             type: 'tween',
         },
