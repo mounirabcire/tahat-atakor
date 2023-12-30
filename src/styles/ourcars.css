@@ -1,12 +1,8 @@
 /* OUR CARS SECTION  */
 .cars-section {
-    /* min-height: 100vh; */
-    margin-bottom: 60px;
-    padding: 0 15px;
-    /* display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; */
+    min-height: 100vh;
+    /* margin-bottom: 60px; */
+    padding: 0 5px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -27,92 +23,98 @@
     color: var(--white-color);
 }
 
-.slider-wrapper{
+.slider-wrapper {
     width: 100%;
     max-width: 500px;
     height: 400px;
-    /* border: 1px solid; */
     border-radius: 5px;
-    /* box-shadow: 5px 5px 20px rgb(0, 0, 0, .4); */
     display: flex;
-    justify-content: start;
+    flex-direction: row-reverse;
+    justify-content: space-between;
     align-items: center;
     overflow: hidden;
     position: relative;
+    /* border: 1px solid; */
 }
 
-.slider-wrapper .img-holder{
-    width: 35%;
-    height: 70%;
+.cars-btns {
+    padding: 15px 10px 15px 0;
+    height: 250px;
+    /* border-left: 1px solid var(--gray1-color); */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    left: 0px;
+    z-index: 1;
+    /* overflow-y: hidden; */
+    overflow-x: scroll;
+}
+
+.cars-btns div {
+    width: 70px;
+    margin-block: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--red-color);
-    position: relative;
-    border-radius: 5px;
-    backdrop-filter: blur(20px);
-    /* border: 1px solid red; */
 }
 
-.slider-wrapper .img-holder img{
-    width: auto;
+.cars-btns div img {
+    width: 100%;
+    opacity: .3;
+    border-bottom: 1px solid transparent;
+}
+
+.cars-btns div img.active-car-btn{
+    opacity: 1;
+    border-bottom: 1px solid var(--gray2-color);
+}
+
+.cars-holder {
+    width: 250px;
+    height: 300px;
+    /* border: 1px solid red; */
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 0;
+}
+
+.cars-holder div {
+    position: absolute;
+    top: 50%;
+    right: -100vw;
+    transform: translate(50%, -50%);
     transition: all .3s;
 }
 
-.icon{
-    position: absolute;
-    z-index: 20;
-    cursor: pointer;
-}
-
-.left-icon{
-    top: 50%;
-    left: -15px;
-    transform: translateY(-50%);
-}
-
-.right-icon{
-    bottom: 50%;
-    right: -15px;
-    transform: translateY(50%);
-}
-
-.icon i{
-    font-size: 50px;
-    color: var(--black-color);
-}
-
-.circles{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    bottom: 0px;
+div.active-car{
     right: 50%;
-    transform: translatex(50%);
 }
 
-.circles div{
-    margin-left: 30px;
-    height: 50px;
-    width: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: .6;
+.cars-holder img {
+    /* width: 100%; */
 }
 
-.circles div img{
+.shape{
+    position: absolute;
     width: 100%;
+    height: 100%;
+    background-color: var(--red-color);
+    z-index: -1;
+    clip-path: polygon(59% 65%, 100% 0, 100% 100%, 0% 100%);
 }
 
-div.active-circle{
-    border-bottom: 1px solid var(--black-color);
-    background: transparent;
-    opacity: 1;
-    /* transform: scale(1); */
+.cars-btns::-webkit-scrollbar {
+    width: 2px; /* Set width for the vertical scrollbar */
 }
+
+.cars-btns::-webkit-scrollbar-thumb {
+    background-color: transparent; /* Set the color of the thumb (the draggable part) */
+}
+
+.cars-btns::-webkit-scrollbar-track {
+    background-color: transparent; /* Set the color of the track (the area behind the thumb) */
+}
+

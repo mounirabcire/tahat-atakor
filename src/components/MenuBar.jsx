@@ -1,4 +1,3 @@
-// import close from '../assets/close.svg';
 import PagesLinks from './PagesLinks';
 
 function MenuBar({ handleVisibility, isVisible }) {

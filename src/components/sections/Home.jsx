@@ -15,7 +15,7 @@ const parentVariants = {
     visible: {
         color: 'white',
         transition: {
-            delay: 1.7,
+            delay: 1.3,
             type: 'tween',
         },
     },
@@ -28,7 +28,7 @@ const childrenVariants = {
     visible: {
         x: '100vw',
         transition: {
-            duration: 2,
+            duration: .8,
             delay: 1,
             type: 'tween',
         },
@@ -52,12 +52,6 @@ function Home() {
             <div className="bg-img" style={style}>
                 <div className="bg-back">
                     <div className="container">
-                        {/* {isVisible && (
-                            <MenuBar
-                                handleVisibility={handleVisibility}
-                                isVisible={isVisible}
-                            />
-                        )} */}
                         <MenuBar
                             handleVisibility={handleVisibility}
                             isVisible={isVisible}

@@ -5,8 +5,9 @@ import car3 from '../../assets/car3.png';
 import car4 from '../../assets/car4.png';
 
 import '../../styles/ourcars.css';
+import { motion } from 'framer-motion';
 
-const cars = [car1, car2, car3, car4];
+const cars = [car1, car2, car3, car4, car1, car2, car3, car4];
 
 function OurCars() {
     const [currentCarIndex, setCurrentCarIndex] = useState(0);
@@ -31,35 +32,37 @@ function OurCars() {
                 Our <span>Cars</span>
             </h2>
             <div className="slider-wrapper">
-                {cars.map((car, index) => (
-                    <div
-                        className="img-holder"
-                        key={index}
-                        style={currentCarIndex === index ? {} : style}
-                    >
-                        <img src={car} alt="A car" />
-                    </div>
-                ))}
-
-                <div className="circles">
+                <div className="cars-holder">
                     {cars.map((car, index) => (
                         <div
-                            onClick={() => setCurrentCarIndex(index)}
                             key={index}
-                            className={`${
-                                index === currentCarIndex ? 'active-circle' : ''
-                            }`}
+                            className={
+                                currentCarIndex === index ? 'active-car' : ''
+                            }
                         >
                             <img src={car} alt="A car" />
                         </div>
                     ))}
                 </div>
-                {/* <div className="icon right-icon" onClick={handleNextCar}>
-                    <i className="ri-arrow-right-s-line"></i>
+                <div className="cars-btns">
+                    {cars.map((car, index) => (
+                        <div
+                            key={index}
+                            onClick={() => setCurrentCarIndex(index)}
+                        >
+                            <img
+                                className={`${
+                                    index === currentCarIndex
+                                        ? 'active-car-btn'
+                                        : ''
+                                }`}
+                                src={car}
+                                alt="A car"
+                            />
+                        </div>
+                    ))}
                 </div>
-                <div className="icon left-icon" onClick={handlePreviousCar}>
-                    <i className="ri-arrow-left-s-line"></i>
-                </div> */}
+                <div className="shape"></div>
             </div>
         </section>
     );
