@@ -68,7 +68,7 @@
     font-size: calc(var(--h1-size) - 47px);
     font-weight: 200;
     position: relative;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 .headings h1 span {

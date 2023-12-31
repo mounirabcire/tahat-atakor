@@ -19,7 +19,7 @@ function PagesLinks({ onClick = null, parentClassName }) {
         visible: {
             transition: {
                 delayChildren: 0.2,
-                staggerChildren: .06,
+                staggerChildren: 0.06,
                 staggerDirection: 1,
             },
         },
@@ -110,15 +110,14 @@ function PagesLinks({ onClick = null, parentClassName }) {
                     </motion.a>
                 </li>
                 <li>
-                    <motion.select
+                    <select
                         value={language}
                         onChange={e => setLanguage(e.target.value)}
-                        variants={linksVars}
                     >
                         <option value="En">English</option>
                         <option value="Ar">Arabic</option>
                         <option value="Fr">French</option>
-                    </motion.select>
+                    </select>
                 </li>
             </motion.ul>
         </div>
