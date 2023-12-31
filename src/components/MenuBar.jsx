@@ -1,11 +1,34 @@
+import { motion } from 'framer-motion';
 import PagesLinks from './PagesLinks';
 
 function MenuBar({ handleVisibility, isVisible }) {
+    const menuVars = {
+        initial: {
+            scaleY: 0,
+        },
+        open: {
+            scaleY: 1,
+            transition: {
+                duration: 0.15,
+                ease: [0.12, 0, 0.39, 0],
+            },
+        },
+        exit: {
+            scaleY: -1,
+            transition: {
+                duration: 0.2,
+                delay: 0.5,
+                ease: [0.22, 1, 0.36, 1],
+            },
+        },
+    };
     return (
-        <div
-            className={`menu-bar ${
-                isVisible ? 'open-menu-bar' : 'close-menu-bar'
-            }`}
+        <motion.div
+            className={`menu-bar`}
+            variants={menuVars}
+            initial="initial"
+            animate="open"
+            exit="exit"
         >
             <div className="close-icon">
                 <i onClick={handleVisibility} className="ri-close-line"></i>
@@ -14,7 +37,7 @@ function MenuBar({ handleVisibility, isVisible }) {
                 parentClassName="links-menu-bar"
                 onClick={handleVisibility}
             />
-        </div>
+        </motion.div>
     );
 }
 
