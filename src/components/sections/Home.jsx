@@ -20,9 +20,26 @@ function Home() {
         setIsVisible(pre => !pre);
     }
 
+    const parentVars = {
+        hidden: {
+            transition: {
+                staggerChildren: 0.06,
+                staggerDirection: -1,
+            },
+        },
+        visible: {
+            transition: {
+                delayChildren: 0.2,
+                staggerChildren: 0.06,
+                staggerDirection: 1,
+            },
+        },
+    };
+
     const textVars = {
         hidden: {
-            y: '100vh',
+            y: '50vh',
+            opacity: 0,
             transition: {
                 duration: 0.5,
                 ease: [0.37, 0, 0.63, 1],
@@ -30,6 +47,7 @@ function Home() {
         },
         visible: {
             y: 0,
+            opacity: 1,
             transition: {
                 duration: 0.3,
                 delay: 0.5,
@@ -70,35 +88,44 @@ function Home() {
                             </div>
                         </nav>
                         <section>
-                            <div className="row">
-                                <div className="headings col-12">
+                            <motion.div
+                                className="row"
+                                variants={parentVars}
+                                initial="hidden"
+                                animate="visible"
+                            >
+                                <motion.div className="headings col-12">
                                     <h1>
-                                        <motion.div
-                                            variants={textVars}
-                                            initial="hidden"
-                                            animate="visible"
-                                        >
+                                        <motion.div variants={textVars}>
                                             Book Your Adventure: Find the
                                             Perfect <span>Rental Car</span> for
                                             Your Next Trip
                                         </motion.div>
                                     </h1>
                                     <h4>
-                                        <div>
+                                        <motion.div variants={textVars}>
                                             Hit the Road in Style with Our Fleet
                                             of High-Performance Rental Cars
-                                        </div>
+                                        </motion.div>
                                     </h4>
+                                </motion.div>
+                                <div
+                                    className="btns"
+                                    
+                                >
+                                    <motion.div variants={textVars}>
+                                        <Button
+                                            isLink={true}
+                                            pageLink="booking"
+                                        >
+                                            Book now
+                                        </Button>
+                                        <Button isLink={true} pageLink="cars">
+                                            See all cars
+                                        </Button>
+                                    </motion.div>
                                 </div>
-                                <div className="btns">
-                                    <Button isLink={true} pageLink="booking">
-                                        Book now
-                                    </Button>
-                                    <Button isLink={true} pageLink="cars">
-                                        See all cars
-                                    </Button>
-                                </div>
-                            </div>
+                            </motion.div>
                         </section>
                     </div>
                 </div>
