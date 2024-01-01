@@ -7,8 +7,10 @@ import logo from '../../assets/logo-white.svg';
 import bgImg from '../../assets/bg.jpg';
 import '../../styles/home.css';
 import { AnimatePresence } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
 function Home() {
+    const { t } = useTranslation();
     const [isVisible, setIsVisible] = useState(false);
     const style = {
         background: `url(${bgImg}) no-repeat fixed center`,
@@ -56,31 +58,26 @@ function Home() {
                             <div className="row">
                                 <div className="headings col-12">
                                     <h1>
-                                        <div>
-                                            Book Your Adventure: Find the
-                                            Perfect <span>Rental Car</span> for
-                                            Your Next Trip
-                                        </div>
+                                        {/* Book Your Adventure: Find the Perfect{' '}
+                                        <span>Rental Car</span> for Your Next
+                                        Trip */}
+                                        {t('home_h1_1')}{' '}
+                                        <span>{t('home_h1_span')}</span>
+                                        {t('home_h1_2')}
                                     </h1>
                                     <h4>
-                                        <div>
-                                            Hit the Road in Style with Our Fleet
-                                            of High-Performance Rental Cars
-                                        </div>
+                                        {/* Hit the Road in Style with Our Fleet of
+                                        High-Performance Rental Cars */}
+                                        {t('home_h4')}
                                     </h4>
                                 </div>
                                 <div className="btns">
-                                    <div>
-                                        <Button
-                                            isLink={true}
-                                            pageLink="booking"
-                                        >
-                                            Book now
-                                        </Button>
-                                        <Button isLink={true} pageLink="cars">
-                                            See all cars
-                                        </Button>
-                                    </div>
+                                    <Button isLink={true} pageLink="booking">
+                                        {t('home_left_btn')}
+                                    </Button>
+                                    <Button isLink={true} pageLink="cars">
+                                        {t('home_right_btn')}
+                                    </Button>
                                 </div>
                             </div>
                         </section>

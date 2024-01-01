@@ -1,13 +1,15 @@
-import { useState } from 'react';
+import {  useState } from 'react';
 import { motion } from 'framer-motion';
+import i18next from 'i18next';
 
 function PagesLinks({ onClick = null, parentClassName }) {
     const [activeLink, setActiveLink] = useState('Home');
-    const [language, setLanguage] = useState('En');
+    const [language, setLanguage] = useState('en');
 
     function handleActiveLink(link) {
         setActiveLink(link);
     }
+
 
     const parentVars = {
         hidden: {
@@ -113,10 +115,13 @@ function PagesLinks({ onClick = null, parentClassName }) {
                     <select
                         value={language}
                         onChange={e => setLanguage(e.target.value)}
+                        onClick={e => {
+                            i18next.changeLanguage(e.target.value);
+                        }}
                     >
-                        <option value="En">English</option>
-                        <option value="Ar">Arabic</option>
-                        <option value="Fr">French</option>
+                        <option value="en">English</option>
+                        <option value="ar">Arabic</option>
+                        <option value="fr">French</option>
                     </select>
                 </li>
             </motion.ul>
