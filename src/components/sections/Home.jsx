@@ -6,7 +6,7 @@ import Button from '../Button';
 import logo from '../../assets/logo-white.svg';
 import bgImg from '../../assets/bg.jpg';
 import '../../styles/home.css';
-import { AnimatePresence, motion } from 'framer-motion';
+import { AnimatePresence } from 'framer-motion';
 
 function Home() {
     const [isVisible, setIsVisible] = useState(false);
@@ -19,41 +19,6 @@ function Home() {
     function handleVisibility() {
         setIsVisible(pre => !pre);
     }
-
-    const parentVars = {
-        hidden: {
-            transition: {
-                staggerChildren: 0.06,
-                staggerDirection: -1,
-            },
-        },
-        visible: {
-            transition: {
-                delayChildren: 0.2,
-                staggerChildren: 0.06,
-                staggerDirection: 1,
-            },
-        },
-    };
-
-    const textVars = {
-        hidden: {
-            y: '50vh',
-            opacity: 0,
-            transition: {
-                duration: 0.5,
-                ease: [0.37, 0, 0.63, 1],
-            },
-        },
-        visible: {
-            y: 0,
-            opacity: 1,
-            transition: {
-                duration: 0.3,
-                delay: 0.5,
-            },
-        },
-    };
 
     return (
         <header className="home-section" id="home">
@@ -88,32 +53,24 @@ function Home() {
                             </div>
                         </nav>
                         <section>
-                            <motion.div
-                                className="row"
-                                variants={parentVars}
-                                initial="hidden"
-                                animate="visible"
-                            >
-                                <motion.div className="headings col-12">
+                            <div className="row">
+                                <div className="headings col-12">
                                     <h1>
-                                        <motion.div variants={textVars}>
+                                        <div>
                                             Book Your Adventure: Find the
                                             Perfect <span>Rental Car</span> for
                                             Your Next Trip
-                                        </motion.div>
+                                        </div>
                                     </h1>
                                     <h4>
-                                        <motion.div variants={textVars}>
+                                        <div>
                                             Hit the Road in Style with Our Fleet
                                             of High-Performance Rental Cars
-                                        </motion.div>
+                                        </div>
                                     </h4>
-                                </motion.div>
-                                <div
-                                    className="btns"
-                                    
-                                >
-                                    <motion.div variants={textVars}>
+                                </div>
+                                <div className="btns">
+                                    <div>
                                         <Button
                                             isLink={true}
                                             pageLink="booking"
@@ -123,9 +80,9 @@ function Home() {
                                         <Button isLink={true} pageLink="cars">
                                             See all cars
                                         </Button>
-                                    </motion.div>
+                                    </div>
                                 </div>
-                            </motion.div>
+                            </div>
                         </section>
                     </div>
                 </div>
