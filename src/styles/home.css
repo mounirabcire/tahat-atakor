@@ -181,6 +181,7 @@
 .links-menu-bar ul li:not(.dropdown) {
     margin-block: 5px;
     overflow: hidden;
+    text-align: center;
 }
 
 .links-menu-bar ul li a {

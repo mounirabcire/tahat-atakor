@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import i18next from 'i18next';
+import { useTranslation } from 'react-i18next';
 
 const languages = [
     {
@@ -20,13 +21,8 @@ const languages = [
     },
 ];
 
-function PagesLinks({ onClick = null, parentClassName }) {
-    const [activeLink, setActiveLink] = useState('Home');
-    const [currentLanguage, setCurrentLanguage] = useState('en');
-
-    function handleActiveLink(link) {
-        setActiveLink(link);
-    }
+function PagesLinks({ onClick = null, parentClassName, activeLink, handleActiveLink, currentLanguage, setCurrentLanguage }) {
+    const { t } = useTranslation();
 
     useEffect(() => {
         currentLanguage === 'ar'
@@ -83,7 +79,7 @@ function PagesLinks({ onClick = null, parentClassName }) {
                         onClick={e => handleActiveLink(e.target.innerHTML)}
                         variants={linksVars}
                     >
-                        Home
+                        {t('home_link')}
                     </motion.a>
                 </li>
                 <li>
@@ -95,7 +91,7 @@ function PagesLinks({ onClick = null, parentClassName }) {
                         onClick={e => handleActiveLink(e.target.innerHTML)}
                         variants={linksVars}
                     >
-                        About us
+                        {t('aboutus_link')}
                     </motion.a>
                 </li>
                 <li>
@@ -107,7 +103,7 @@ function PagesLinks({ onClick = null, parentClassName }) {
                         onClick={e => handleActiveLink(e.target.innerHTML)}
                         variants={linksVars}
                     >
-                        Cars
+                        {t('cars_link')}
                     </motion.a>
                 </li>
                 <li>
@@ -119,7 +115,7 @@ function PagesLinks({ onClick = null, parentClassName }) {
                         onClick={e => handleActiveLink(e.target.innerHTML)}
                         variants={linksVars}
                     >
-                        Book now
+                        {t('booknow_link')}
                     </motion.a>
                 </li>
                 <li>
@@ -131,22 +127,9 @@ function PagesLinks({ onClick = null, parentClassName }) {
                         onClick={e => handleActiveLink(e.target.innerHTML)}
                         variants={linksVars}
                     >
-                        Contact
+                        {t('contact_link')}
                     </motion.a>
                 </li>
-                {/* <li>
-                    <select
-                        value={language}
-                        onChange={e => setLanguage(e.target.value)}
-                        onClick={e => {
-                            i18next.changeLanguage(e.target.value);
-                        }}
-                    >
-                        <option value="en">English</option>
-                        <option value="ar">Arabic</option>
-                        <option value="fr">French</option>
-                    </select>
-                </li> */}
                 <li className="dropdown">
                     <button
                         type="button"

@@ -1,7 +1,14 @@
 import { motion } from 'framer-motion';
 import PagesLinks from './PagesLinks';
 
-function MenuBar({ handleVisibility, isVisible }) {
+function MenuBar({
+    handleVisibility,
+    isVisible,
+    activeLink,
+    handleActiveLink,
+    currentLanguage,
+    setCurrentLanguage,
+}) {
     const menuVars = {
         initial: {
             scaleY: 0,
@@ -36,6 +43,10 @@ function MenuBar({ handleVisibility, isVisible }) {
             <PagesLinks
                 parentClassName="links-menu-bar"
                 onClick={handleVisibility}
+                activeLink={activeLink}
+                handleActiveLink={handleActiveLink}
+                currentLanguage={currentLanguage}
+                setCurrentLanguage={setCurrentLanguage}
             />
         </motion.div>
     );

@@ -4,6 +4,7 @@ import CardItem from '../CardItem';
 import cars from '../../assets/cars.jpg';
 import customers from '../../assets/customer-service.jpg';
 import comforCar from '../../assets/comfor-car.jpg';
+import { useTranslation } from 'react-i18next';
 
 const cardInfo = [
     {
@@ -24,6 +25,7 @@ const cardInfo = [
 ];
 
 function Aboutus() {
+    const { t } = useTranslation();
 
     return (
         <section className="aboutus-section" id="about">
@@ -31,25 +33,28 @@ function Aboutus() {
                 <div className="row">
                     <div className="col-12 texts">
                         <h2>
-                            <span>Who</span> Are we
+                            <span>{t('about_h1_span')}</span> {t('about_h1')}
                         </h2>
                         <p>
-                            Welcome to <span>Tahat Atakor</span> Your Trusted
-                            Partner in Adventure! At <span>Tahat Atakor</span>{' '}
-                            we believe in the power of exploration and the
-                            freedom that comes with the open road. Established
-                            in 2023, we set out on a mission to redefine the way
-                            you experience travel. What started as a passion for
-                            exceptional journeys has grown into a premier
-                            destination for top-notch rental car services.
-                            <br /> we aim to empower your travels, enabling you
+                            {/* Welcome to Tahat Atakor Your Trusted Partner in
+                            Adventure! At Tahat Atakor we believe in the power
+                            of exploration and the freedom that comes with the
+                            open road. Established in 2023, we set out on a
+                            mission to redefine the way you experience travel.
+                            What started as a passion for exceptional journeys
+                            has grown into a premier destination for top-notch
+                            rental car services. */}
+                            {t('about_p_1')}
+                            <br /> 
+                            {t('about_p_2')}
+                            {/* we aim to empower your travels, enabling you
                             to explore new horizons with confidence and style.
                             We are more than just a rental car service we're
                             your partner in creating lasting memories and
-                            facilitating the adventures that shape your story.
+                            facilitating the adventures that shape your story. */}
                             <br />
                             <span className="explore-link">
-                                <a href="#cars">Explore our cars</a>
+                                <a href="#cars">{t('about_link')}</a>
                                 <i className="ri-arrow-right-line"></i>
                             </span>
                         </p>
@@ -57,7 +62,8 @@ function Aboutus() {
                 </div>
                 <div className="row">
                     <h2>
-                        <span>Why</span> us
+                        <span>{t('about_h1_span_2')}</span> 
+                        {t('about_h1_2')}
                     </h2>
                     {cardInfo.map(currObj => (
                         <CardItem cardContent={currObj} key={currObj.title} />

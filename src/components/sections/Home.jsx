@@ -9,7 +9,7 @@ import '../../styles/home.css';
 import { AnimatePresence } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 
-function Home() {
+function Home({ activeLink, handleActiveLink, currentLanguage, setCurrentLanguage }) {
     const { t } = useTranslation();
     const [isVisible, setIsVisible] = useState(false);
     const style = {
@@ -32,6 +32,10 @@ function Home() {
                                 <MenuBar
                                     handleVisibility={handleVisibility}
                                     isVisible={isVisible}
+                                    activeLink={activeLink}
+                                    handleActiveLink={handleActiveLink}
+                                    currentLanguage={currentLanguage}
+                                    setCurrentLanguage={setCurrentLanguage}
                                 />
                             )}
                         </AnimatePresence>
