@@ -1,15 +1,38 @@
-import {  useState } from 'react';
+import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import i18next from 'i18next';
 
+const languages = [
+    {
+        languageName: 'English',
+        languageCode: 'en',
+        countryFlagCode: 'gb',
+    },
+    {
+        languageName: 'French',
+        languageCode: 'fr',
+        countryFlagCode: 'fr',
+    },
+    {
+        languageName: 'Arabic',
+        languageCode: 'ar',
+        countryFlagCode: 'sa',
+    },
+];
+
 function PagesLinks({ onClick = null, parentClassName }) {
     const [activeLink, setActiveLink] = useState('Home');
-    const [language, setLanguage] = useState('en');
+    const [currentLanguage, setCurrentLanguage] = useState('en');
 
     function handleActiveLink(link) {
         setActiveLink(link);
     }
 
+    useEffect(() => {
+        currentLanguage === 'ar'
+            ? (document.body.dir = 'rtl')
+            : (document.body.dir = 'ltr');
+    }, [currentLanguage]);
 
     const parentVars = {
         hidden: {
@@ -111,7 +134,7 @@ function PagesLinks({ onClick = null, parentClassName }) {
                         Contact
                     </motion.a>
                 </li>
-                <li>
+                {/* <li>
                     <select
                         value={language}
                         onChange={e => setLanguage(e.target.value)}
@@ -123,6 +146,41 @@ function PagesLinks({ onClick = null, parentClassName }) {
                         <option value="ar">Arabic</option>
                         <option value="fr">French</option>
                     </select>
+                </li> */}
+                <li className="dropdown">
+                    <button
+                        type="button"
+                        className="btn dropdown-toggle"
+                        data-bs-toggle="dropdown"
+                    >
+                        <i className="ri-global-line"></i>
+                    </button>
+                    <ul className="dropdown-menu">
+                        {languages.map(
+                            (
+                                { languageName, languageCode, countryFlagCode },
+                                i
+                            ) => (
+                                <li
+                                    key={i}
+                                    className={`dropdown-item ${
+                                        currentLanguage !== languageCode
+                                            ? 'hiddenItem'
+                                            : ''
+                                    }`}
+                                    onClick={e => {
+                                        setCurrentLanguage(languageCode);
+                                        i18next.changeLanguage(languageCode);
+                                    }}
+                                >
+                                    {languageName}
+                                    <span
+                                        className={`flag-icon flag-icon-${countryFlagCode}`}
+                                    ></span>
+                                </li>
+                            )
+                        )}
+                    </ul>
                 </li>
             </motion.ul>
         </div>
