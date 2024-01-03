@@ -18,5 +18,20 @@
     "about_p_2": "we aim to empower your travels, enabling youto explore new horizons with confidence and style.We are more than just a rental car service we'reyour partner in creating lasting memories andfacilitating the adventures that shape your story.",
     "about_link": "Explore our cars",
     "about_h1_span_2": "Why",
-    "about_h1_2": " us"
+    "about_h1_2": " us",
+
+    "cars_h1": "Our ",
+    "cars_h1_span": "Cars",
+
+    "booknow_h1": "Book ",
+    "booknow_h1_span": "Now",
+    "booknow_form_h3": "Choose your next car!",
+    "booknow_form_name": "Full name...",
+    "booknow_form_email": "Email...",
+    "booknow_form_start_date": "Select the start date...",
+    "booknow_form_end_date": "Select the end date...",
+    "booknow_form_submit": "Book",
+
+    "contact_h1_span": "Contact",
+    "contact_h1": " us"
 }

@@ -9,7 +9,12 @@ import '../../styles/home.css';
 import { AnimatePresence } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 
-function Home({ activeLink, handleActiveLink, currentLanguage, setCurrentLanguage }) {
+function Home({
+    activeLink,
+    handleActiveLink,
+    currentLanguage,
+    setCurrentLanguage,
+}) {
     const { t } = useTranslation();
     const [isVisible, setIsVisible] = useState(false);
     const style = {
@@ -54,7 +59,15 @@ function Home({ activeLink, handleActiveLink, currentLanguage, setCurrentLanguag
                                         <div></div>
                                         <div></div>
                                     </div>
-                                    <PagesLinks parentClassName="links-nav" />
+                                    <PagesLinks
+                                        parentClassName="links-nav"
+                                        handleVisibility={handleVisibility}
+                                        isVisible={isVisible}
+                                        activeLink={activeLink}
+                                        handleActiveLink={handleActiveLink}
+                                        currentLanguage={currentLanguage}
+                                        setCurrentLanguage={setCurrentLanguage}
+                                    />
                                 </div>
                             </div>
                         </nav>
@@ -62,24 +75,29 @@ function Home({ activeLink, handleActiveLink, currentLanguage, setCurrentLanguag
                             <div className="row">
                                 <div className="headings col-12">
                                     <h1>
-                                        {/* Book Your Adventure: Find the Perfect{' '}
-                                        <span>Rental Car</span> for Your Next
-                                        Trip */}
                                         {t('home_h1_1')}{' '}
                                         <span>{t('home_h1_span')}</span>
                                         {t('home_h1_2')}
                                     </h1>
-                                    <h4>
-                                        {/* Hit the Road in Style with Our Fleet of
-                                        High-Performance Rental Cars */}
-                                        {t('home_h4')}
-                                    </h4>
+                                    <h4>{t('home_h4')}</h4>
                                 </div>
                                 <div className="btns">
-                                    <Button isLink={true} pageLink="booking">
+                                    <Button
+                                        isLink={true}
+                                        pageLink="booking"
+                                        onClick={() =>
+                                            handleActiveLink(t('booknow_link'))
+                                        }
+                                    >
                                         {t('home_left_btn')}
                                     </Button>
-                                    <Button isLink={true} pageLink="cars">
+                                    <Button
+                                        isLink={true}
+                                        pageLink="cars"
+                                        onClick={() =>
+                                            handleActiveLink(t('cars_link'))
+                                        }
+                                    >
                                         {t('home_right_btn')}
                                     </Button>
                                 </div>

@@ -8,8 +8,10 @@ import car2 from '../../assets/car2.png';
 import car3 from '../../assets/car3.png';
 import car4 from '../../assets/car4.png';
 import '../../styles/booknow.css';
+import { useTranslation } from 'react-i18next';
 
 function BookNow() {
+    const { t } = useTranslation();
     const [fullName, setFullName] = useState('');
     const [email, setEmail] = useState('');
     const [startDate, setStartDate] = useState('');
@@ -35,7 +37,7 @@ function BookNow() {
                     setFullName('');
                     setEmail('');
                     setStartDate('');
-                    setStartDate('');
+                    setEndDate('');
                 },
                 err => setErrorMessage(true)
             );
@@ -70,7 +72,8 @@ function BookNow() {
             <div className="container">
                 <div className="row">
                     <h2>
-                        Book <span>Now</span>
+                        {t('booknow_h1')}
+                        <span>{t('booknow_h1_span')}</span>
                     </h2>
                     <div className="img-holder col-12 col-lg-6">
                         {cars === 'Mercedes Benz' && (
@@ -88,14 +91,14 @@ function BookNow() {
                     </div>
                     <div className="col-12 col-lg-6">
                         <form className="form" ref={form} onSubmit={sendEmail}>
-                            <h3>Choose your next car!</h3>
+                            <h3>{t('booknow_form_h3')}</h3>
                             <div className="inputBox">
                                 <input
                                     className="inputText"
                                     type="text"
                                     name="user_name"
                                     id="contact-name"
-                                    placeholder="Full name..."
+                                    placeholder={t('booknow_form_name')}
                                     value={fullName}
                                     onChange={e => setFullName(e.target.value)}
                                     required
@@ -107,7 +110,7 @@ function BookNow() {
                                     type="email"
                                     name="user_email"
                                     id="contact-name"
-                                    placeholder="Email..."
+                                    placeholder={t('booknow_form_email')}
                                     value={email}
                                     onChange={e => setEmail(e.target.value)}
                                     required
@@ -118,8 +121,9 @@ function BookNow() {
                                     selected={startDate}
                                     onChange={date => setStartDate(date)}
                                     dateFormat="dd-MM-yyyy"
-                                    placeholderText="Select the start date..."
+                                    placeholderText={t('booknow_form_start_date')}
                                     name="start_date"
+                                    required
                                 />
                             </div>
                             <div className="inputBox">
@@ -127,8 +131,9 @@ function BookNow() {
                                     selected={endDate}
                                     onChange={date => setEndDate(date)}
                                     dateFormat="dd-MM-yyyy"
-                                    placeholderText="Select the end date..."
+                                    placeholderText={t('booknow_form_end_date')}
                                     name="end_date"
+                                    required
                                 />
                             </div>
                             <div className="inputBox">
@@ -149,7 +154,7 @@ function BookNow() {
                             </div>
                             <input
                                 type="submit"
-                                value="SUBMIT"
+                                value={t('booknow_form_submit')}
                                 className="submitBox"
                             />
                         </form>

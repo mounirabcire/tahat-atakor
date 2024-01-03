@@ -18,5 +18,20 @@
     "about_p_2": "notre objectif est de dynamiser vos voyages, vous permettant d'explorer de nouveaux horizons en toute confiance et avec style. Nous sommes plus qu'un simple service de location de voitures, nous sommes votre partenaire pour créer des souvenirs inoubliables et faciliter les aventures qui façonnent votre histoire.",
     "about_link": "Explorez nos voitures",
     "about_h1_span_2": "Pourquoi ",
-    "about_h1_2": "nous"
+    "about_h1_2": "nous",
+
+    "cars_h1": "Nos ",
+    "cars_h1_span": "Voitures",
+
+    "booknow_h1": "Réser",
+    "booknow_h1_span": "vez",
+    "booknow_form_h3": "Choisissez votre prochaine voiture!",
+    "booknow_form_name": "Nom et prénom...",
+    "booknow_form_email": "E-mail...",
+    "booknow_form_start_date": "Sélectionnez la date de debut...",
+    "booknow_form_end_date": "Sélectionnez la date de fin...",
+    "booknow_form_submit": "Réservez",
+
+    "contact_h1_span": "Contactez",
+    "contact_h1": "-nous"
 }

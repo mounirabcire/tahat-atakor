@@ -1,28 +1,32 @@
 import '../../styles/contact.css';
 import logo from '../../assets/logo-white.svg';
+import { useTranslation } from 'react-i18next';
 
 function Contact() {
+    const { t } = useTranslation();
+
     return (
         <footer className="contact-section" id="contact">
             <div className="container">
                 <h2>
-                    <span>Contact</span> us
+                    <span>{t('contact_h1_span')}</span>
+                    {t('contact_h1')}
                 </h2>
                 <div className="row">
                     <div className="col-12 col-lg-4">
                         <div>
                             <ul>
                                 <li>
-                                    <a href="#home">Home</a>
+                                    <a href="#home">{t('home_link')}</a>
                                 </li>
                                 <li>
-                                    <a href="#about">About us</a>
+                                    <a href="#about">{t('aboutus_link')}</a>
                                 </li>
                                 <li>
-                                    <a href="#cars">Cars</a>
+                                    <a href="#cars">{t('cars_link')}</a>
                                 </li>
                                 <li>
-                                    <a href="#booking">Book Now</a>
+                                    <a href="#booking">{t('booknow_link')}</a>
                                 </li>
                             </ul>
                         </div>
@@ -44,7 +48,7 @@ function Contact() {
                     <div className="col-12 col-lg-4">
                         <h4>Social Media</h4>
                         <div>
-                            <ul className='social-list'>
+                            <ul className="social-list">
                                 <li>
                                     <a
                                         href="https://www.instagram.com/tahat.atakor31"

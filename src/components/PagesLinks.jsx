@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import i18next from 'i18next';
 import { useTranslation } from 'react-i18next';
@@ -10,20 +10,26 @@ const languages = [
         countryFlagCode: 'gb',
     },
     {
-        languageName: 'French',
+        languageName: 'Français',
         languageCode: 'fr',
         countryFlagCode: 'fr',
     },
     {
-        languageName: 'Arabic',
+        languageName: 'العربية',
         languageCode: 'ar',
         countryFlagCode: 'sa',
     },
 ];
 
-function PagesLinks({ onClick = null, parentClassName, activeLink, handleActiveLink, currentLanguage, setCurrentLanguage }) {
+function PagesLinks({
+    onClick = null,
+    parentClassName,
+    activeLink,
+    handleActiveLink,
+    currentLanguage,
+    setCurrentLanguage,
+}) {
     const { t } = useTranslation();
-
     useEffect(() => {
         currentLanguage === 'ar'
             ? (document.body.dir = 'rtl')
@@ -74,7 +80,7 @@ function PagesLinks({ onClick = null, parentClassName, activeLink, handleActiveL
                     <motion.a
                         href="#home"
                         className={`${
-                            activeLink === 'Home' ? 'active-link' : ''
+                            activeLink === t('home_link') ? 'active-link' : ''
                         }`}
                         onClick={e => handleActiveLink(e.target.innerHTML)}
                         variants={linksVars}
@@ -86,7 +92,9 @@ function PagesLinks({ onClick = null, parentClassName, activeLink, handleActiveL
                     <motion.a
                         href="#about"
                         className={`${
-                            activeLink === 'About us' ? 'active-link' : ''
+                            activeLink === t('aboutus_link')
+                                ? 'active-link'
+                                : ''
                         }`}
                         onClick={e => handleActiveLink(e.target.innerHTML)}
                         variants={linksVars}
@@ -98,7 +106,7 @@ function PagesLinks({ onClick = null, parentClassName, activeLink, handleActiveL
                     <motion.a
                         href="#cars"
                         className={`${
-                            activeLink === 'Cars' ? 'active-link' : ''
+                            activeLink === t('cars_link') ? 'active-link' : ''
                         }`}
                         onClick={e => handleActiveLink(e.target.innerHTML)}
                         variants={linksVars}
@@ -110,7 +118,9 @@ function PagesLinks({ onClick = null, parentClassName, activeLink, handleActiveL
                     <motion.a
                         href="#booking"
                         className={`${
-                            activeLink === 'Book now' ? 'active-link' : ''
+                            activeLink === t('booknow_link')
+                                ? 'active-link'
+                                : ''
                         }`}
                         onClick={e => handleActiveLink(e.target.innerHTML)}
                         variants={linksVars}
@@ -122,7 +132,9 @@ function PagesLinks({ onClick = null, parentClassName, activeLink, handleActiveL
                     <motion.a
                         href="#contact"
                         className={`${
-                            activeLink === 'Contact' ? 'active-link' : ''
+                            activeLink === t('contact_link')
+                                ? 'active-link'
+                                : ''
                         }`}
                         onClick={e => handleActiveLink(e.target.innerHTML)}
                         variants={linksVars}

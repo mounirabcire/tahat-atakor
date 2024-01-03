@@ -4,9 +4,11 @@ import BookNow from './components/sections/BookNow';
 import Contact from './components/sections/Contact';
 import OurCars from './components/sections/OurCars';
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 function App() {
-    const [activeLink, setActiveLink] = useState('Home');
+    const { t } = useTranslation();
+    const [activeLink, setActiveLink] = useState(t('home_link'));
     const [currentLanguage, setCurrentLanguage] = useState('en');
 
     function handleActiveLink(link) {

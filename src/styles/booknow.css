@@ -40,8 +40,9 @@
     align-items: center;
 }
 
-.form h2 {
+.form h3 {
     margin-block: 15px;
+    text-align: center;
 }
 
 .inputBox {
@@ -63,7 +64,6 @@
     outline: none;
 }
 
-/* Override styles from react-datepicker */
 .react-datepicker-wrapper {
     width: 100%;
 }
@@ -84,36 +84,6 @@
 input::placeholder {
     color: var(--gray1-color);
 }
-
-/* .msgArea {
-    height: 200px;
-} */
-
-/* .inputBox span {
-    letter-spacing: 3px;
-    position: absolute;
-    left: 4px;
-    transform: translateY(2px);
-    pointer-events: none;
-    transition: transform 0.4s;
-} */
-
-/* .inputText:focus,
-.inputText:valid {
-    border: 2px solid var(--titleColor);
-} */
-
-/* .inputText:focus~span,
-.inputText:valid~span {
-    width: 110px;
-    padding: 5px 10px;
-    text-align: center;
-    color: var(--white-color);
-    background-color: var(--red-color);
-    font-size: 0.8rem;
-    letter-spacing: 2px;
-    transform: translate(146px, -23px);
-} */
 
 .submitBox {
     margin: 10px 0;
