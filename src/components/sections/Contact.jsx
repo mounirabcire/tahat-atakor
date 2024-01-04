@@ -35,18 +35,18 @@ function Contact() {
                         </div>
                     </div>
                     <div className="col-12 col-lg-4">
-                        <h4>Information</h4>
+                        <h4>{t('contact_info_h3')}</h4>
                         <div>
                             <p>0668065962</p>
                             <p>
                                 10, Rue El chahid chakeur chikh, logement 592
                                 CNL, Oran, Algerie
                             </p>
-                            <a href="#location">See our loaction</a>
+                            <a href="#location">{t('contact_info_location')}</a>
                         </div>
                     </div>
                     <div className="col-12 col-lg-4">
-                        <h4>Social Media</h4>
+                        <h4>{t('contact_SM_h3')}</h4>
                         <div>
                             <ul className="social-list">
                                 <li>
@@ -93,9 +93,7 @@ function Contact() {
                         </div>
                     </div>
                 </div>
-                <p className="copyRight">
-                    © 2023 logo, Inc. All rights reserved
-                </p>
+                <p className="copyRight">{t('contact_footer')}</p>
             </div>
         </footer>
     );

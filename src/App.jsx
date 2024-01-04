@@ -24,10 +24,10 @@ function App() {
                 setCurrentLanguage={setCurrentLanguage}
             />
             <main>
-                <Aboutus />
-                <OurCars />
-                <BookNow />
-                <Contact />
+                <Aboutus handleActiveLink={handleActiveLink} />
+                <OurCars handleActiveLink={handleActiveLink} />
+                <BookNow handleActiveLink={handleActiveLink} />
+                <Contact handleActiveLink={handleActiveLink} />
             </main>
         </>
     );

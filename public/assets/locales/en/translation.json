@@ -20,6 +20,13 @@
     "about_h1_span_2": "Why",
     "about_h1_2": " us",
 
+    "whyus_card1_h3": "Versatile Fleet Selection",
+    "whyus_card1_p": "Discover the perfect ride for any occasion from our diverse and well-maintained fleet, ranging from fuel-efficient compacts to spacious SUVs and luxurious sedans.",
+    "whyus_card2_h3": "Customer-Focused Service",
+    "whyus_card2_p": "Experience hassle-free rentals with our dedicated team committed to transparent pricing, straightforward policies, and personalized assistance, ensuring your satisfaction from inquiry to vehicle return.",
+    "whyus_card3_h3": "Modern Comfort and Innovation",
+    "whyus_card3_p": "Enjoy the future of travel with our vehicles equipped with cutting-edge-car technologies, providing a seamless blend of comfort and innovation for a memorable and enjoyable journey.",
+
     "cars_h1": "Our ",
     "cars_h1_span": "Cars",
 
@@ -33,5 +40,9 @@
     "booknow_form_submit": "Book",
 
     "contact_h1_span": "Contact",
-    "contact_h1": " us"
+    "contact_h1": " us",
+    "contact_info_h3": "Informations",
+    "contact_info_location": "Our location",
+    "contact_SM_h3": "Social media",
+    "contact_footer": "© 2023 Tahat Atakor, Inc. All rights reserved"
 }

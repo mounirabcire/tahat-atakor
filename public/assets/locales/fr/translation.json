@@ -20,6 +20,13 @@
     "about_h1_span_2": "Pourquoi ",
     "about_h1_2": "nous",
 
+    "whyus_card1_h3": "Sélection de flotte polyvalente",
+    "whyus_card1_p": "Découvrez le véhicule parfait pour toute occasion grâce à notre flotte diversifiée et bien entretenue, allant des compacts économes en carburant aux VUS spacieux et aux berlines luxueuses.",
+    "whyus_card2_h3": "Service axé sur le client",
+    "whyus_card2_p": "Faites l'expérience de locations sans tracas avec notre équipe dévouée qui s'engage à proposer des prix transparents, des politiques simples et une assistance personnalisée, garantissant votre satisfaction de la demande de renseignements au retour du véhicule.",
+    "whyus_card3_h3": "Confort moderne et innovation",
+    "whyus_card3_p": "Profitez du futur du voyage avec nos véhicules équipés de technologies automobiles de pointe, offrant un mélange harmonieux de confort et d'innovation pour un voyage mémorable et agréable.",
+
     "cars_h1": "Nos ",
     "cars_h1_span": "Voitures",
 
@@ -33,5 +40,11 @@
     "booknow_form_submit": "Réservez",
 
     "contact_h1_span": "Contactez",
-    "contact_h1": "-nous"
+    "contact_h1": "-nous",
+    "contact_info_h3": "Informations",
+    "contact_info_location": "Notre emplacement",
+    "contact_SM_h3": "Réseaux sociaux",
+    "contact_footer": "© 2023 Tahat Atakor, Inc. Tous droits réservés"
+
+
 }

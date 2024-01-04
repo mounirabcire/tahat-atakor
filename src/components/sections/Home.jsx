@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 import MenuBar from '../MenuBar';
 import PagesLinks from '../PagesLinks';
@@ -6,7 +6,7 @@ import Button from '../Button';
 import logo from '../../assets/logo-white.svg';
 import bgImg from '../../assets/bg.jpg';
 import '../../styles/home.css';
-import { AnimatePresence } from 'framer-motion';
+import { AnimatePresence, useInView } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 
 function Home({
@@ -17,6 +17,12 @@ function Home({
 }) {
     const { t } = useTranslation();
     const [isVisible, setIsVisible] = useState(false);
+    // const home = useRef();
+    // const isInview = useInView(home);
+    // useEffect(() => {
+    //     if (isInview) handleActiveLink(t('home_link'));
+    // }, [isInview, t, handleActiveLink]);
+
     const style = {
         background: `url(${bgImg}) no-repeat fixed center`,
         backgroundSize: 'cover',
@@ -26,6 +32,7 @@ function Home({
     function handleVisibility() {
         setIsVisible(pre => !pre);
     }
+
 
     return (
         <header className="home-section" id="home">
