@@ -138,14 +138,32 @@ function Home({
                 <section>
                     <div className="row">
                         <div className="headings col-12">
-                            <h1>
+                            <motion.h1
+                                initial={{ y: '100vh', opacity: 0 }}
+                                animate={{ y: 0, opacity: 1 }}
+                                transition={{ duration: 1, ease: 'anticipate' }}
+                            >
                                 {t('home_h1_1')}{' '}
                                 <span>{t('home_h1_span')}</span>
-                                {t('home_h1_2')}
-                            </h1>
-                            <h4>{t('home_h4')}</h4>
+                            </motion.h1>
+                            <motion.h4
+                                initial={{ y: '100vh', opacity: 0 }}
+                                animate={{ y: 0, opacity: 1 }}
+                                transition={{
+                                    duration: 1,
+                                    delay: 0.2,
+                                    ease: 'anticipate',
+                                }}
+                            >
+                                {t('home_h4')}
+                            </motion.h4>
                         </div>
-                        <div className="btns">
+                        <motion.div
+                            className="btns"
+                            initial={{ y: '100vh', opacity: 0 }}
+                            animate={{ y: 0, opacity: 1 }}
+                            transition={{ duration: 1, ease: 'anticipate' }}
+                        >
                             <Button
                                 isLink={true}
                                 pageLink="booking"
@@ -162,7 +180,7 @@ function Home({
                             >
                                 {t('home_right_btn')}
                             </Button>
-                        </div>
+                        </motion.div>
                     </div>
                 </section>
             </div>

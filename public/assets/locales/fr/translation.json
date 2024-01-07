@@ -1,10 +1,10 @@
 {
-    "home_h1_1": "Réservez votre aventure: trouvez",
-    "home_h1_span": "la voiture de location",
-    "home_h1_2": "idéale pour votre prochain voyage",
-    "home_h4": "Prenez la route avec style grâce à notre flotte de voitures de location hautes performances",
+    "home_h1_1": "TAHAT",
+    "home_h1_span": "ATAKOR",
+    "home_h1_2": "",
+    "home_h4": "Réservez votre aventure: trouvez la voiture de location idéale pour votre prochain voyage",
     "home_left_btn": "Réservez",
-    "home_right_btn": "Notre voitures",
+    "home_right_btn": "Nos voitures",
 
     "home_link": "Accueil",
     "aboutus_link": "Nous",
@@ -45,6 +45,4 @@
     "contact_info_location": "Notre emplacement",
     "contact_SM_h3": "Réseaux sociaux",
     "contact_footer": "© 2023 Tahat Atakor, Inc. Tous droits réservés"
-
-
 }
